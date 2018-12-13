@@ -1,5 +1,5 @@
 //Import React
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 
 class Navbar extends Component {
@@ -24,8 +24,9 @@ class Navbar extends Component {
               Oscar (image)
             </button>
           </li>
-        </ul>   
-      </nav>  
+        </ul>         
+      </nav>
+      
     )
   }
 }
@@ -33,4 +34,4 @@ class Navbar extends Component {
 
 export default Navbar;
 
-//This component is being imported in 'Main.js'
+//This component is being imported in "Main.js"
