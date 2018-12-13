@@ -17,11 +17,11 @@ class Navbar extends Component {
             <a href="#" className="nav-link grow">Log in</a>
           </li>
           <li className="nav-list-item">
-            <a href="#" className="nav-link grow">Welcome Oscar</a>
+            <a href="#" className="nav-link">Welcome Oscar</a>
           </li>
           <li className="nav-list-item">
-            <button type="button" className="btn btn-demo inactive grow" data-toggle="modal" data-target="#myModal2">
-              Profile
+            <button type="button" className="btn btn-demo inactive grow nav-link" data-toggle="modal" data-target="#myModal2">
+              Oscar (image)
             </button>
           </li>
         </ul>   

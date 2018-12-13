@@ -1,10 +1,11 @@
 //Import React
 import React, { Component } from 'react';
+
 //Import styles
 import './styles/wickedcss.css'
-import './styles/App.css';
 //Import components
-import Main from './Main.js';
+import Main from './components/Main.js';
+import './styles/App.css';
 
 class App extends Component {
   render() {
