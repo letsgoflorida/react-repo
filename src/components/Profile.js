@@ -1,5 +1,5 @@
 //Import React
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 
 class Profile extends Component{
@@ -13,4 +13,4 @@ class Profile extends Component{
 
 export default Profile;
 
-//This component is being imported in 'Main.js'
+//This component is being imported in "Main.js"

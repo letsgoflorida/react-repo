@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 //Import Components
 import '../styles/App.css';
-import Profile from './Profile';
+import Home from './Home'
 import Navbar from './Navbar';
 
 class Main extends Component {
@@ -10,7 +10,7 @@ class Main extends Component {
         return(
             <div>
                 <Navbar />
-                
+                <Home />
             </div>
         )
     }
