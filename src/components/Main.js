@@ -8,24 +8,38 @@ import SignUp from './SignUp';
 import {Route, Switch, Link} from "react-router-dom";
 
 class Main extends Component {
-    state = {signUp: false};
+    state = {
+			modalSignUp: false, 
+			modalLogIn: false, 
+			modalProfile: false
+		};
 
-  showSignUp = () => {
-    this.setState({signUp: true});
-  };
+    showModal = (modal) => {
+			console.log(modal)
+			console.log("THIS IS TRUE")
+      this.setState({
+				[modal]: true
+			})
+    };
 
-  hideSignUp = () => {
-    this.setState({signUp: false});
-  };
+    hideModal = (modal) => {
+			console.log("THIS IS FALSE")
+      this.setState({
+				[modal]: false
+			})
+    };
 
 
     render() {
         return(
             <div>
-                <Navbar/>  
-                <SignUp/>
+								<Navbar 
+								show={this.showModal}
+								hide={this.hideModal}
+								/>  
+                <SignUp signUp={this.state.modalSignUp}/>
                 <Switch>
-                    <Route path="/" render={(props) => <Home />}/>
+                  <Route path="/" render={(props) => <Home />}/>
                 </Switch>
             </div>
         )

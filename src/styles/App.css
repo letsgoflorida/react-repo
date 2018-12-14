@@ -12,6 +12,13 @@ body {
     font-family: 'Karla', sans-serif;
 }
 
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
 
 /* NAVBAR FROM BOOTSTRAP */
 a.navbar-brand {

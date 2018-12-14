@@ -14,7 +14,7 @@ class Navbar extends Component {
         </div>
         <ul id="list" className="nav-list">
           <li className="nav-list-item">
-            <Link className="nav-link grow" to="/signup">Sign Up For Account</Link>
+            <a className="nav-link grow" onClick={()=>this.props.show("modalSignUp")}>Sign Up For Account</a>
           </li>
           <li className="nav-list-item">
             <a href="#" className="nav-link grow">Log in</a>
