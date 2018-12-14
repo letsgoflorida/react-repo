@@ -1,5 +1,4 @@
 /* COLORS: 
-
 yellow: (248, 233, 161)
 red: (247, 108, 108)
 light blue: (168, 208, 230)
@@ -28,6 +27,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
+    z-index: 100;
 }
 
 .display-none {
@@ -449,7 +449,10 @@ a.nav-link {
     }
 
     .transparentBackground{
-        background-color: rgba(0,0,0,0.1)
+        background-color: rgba(0,0,0,0.1);
+        -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.45);
+        -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.45);
+        box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.45);
     }
 
 
@@ -489,7 +492,7 @@ a.nav-link {
   transition: all .3s;
 }
 
-/* ---------- LOGIN ---------- */
+/* ---------- login ---------- */
 
 .login h2 {
 	background: #f95252;
@@ -506,7 +509,7 @@ a.nav-link {
 .login fieldset {
 	background: #fff;
 	border-radius: 0 0 20px 20px;
-	padding: 20px 26px;
+	padding: 26px 26px;
 }
 
 .login fieldset p {
@@ -525,7 +528,7 @@ a.nav-link {
 
 .login fieldset input[type="email"], .login fieldset input[type="password"], .login fieldset input[type="text"] {
 	background: #eee;
-	color: black;
+	color:rgb(0,0,0);
 	padding: 4px 10px;
 	width: 100%;
 }
@@ -571,12 +574,8 @@ a.nav-link {
 
 .padding10-0 {
     padding: 10px 0;
-<<<<<<< HEAD
-}
-=======
 }
 
-/* .buttonWidth {
+.buttonWidth {
     width: 17vw;
-} */
->>>>>>> eebefe5906da422a455071a0badcbd4bb2af544f
+}
