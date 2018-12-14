@@ -7,6 +7,7 @@ import './styles/wickedcss.css'
 import Main from './components/Main.js';
 import './styles/App.css';
 
+
 class App extends Component {
   render() {
     return (

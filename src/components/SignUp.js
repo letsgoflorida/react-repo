@@ -4,7 +4,7 @@ import Axios from 'axios';
 import UserService from "../services/UserServices";
 
 
-class LogIn extends Component {
+class SignUp extends Component {
     state = { username: "", email: "", password: "" };
     userService = new UserService();
     
@@ -37,30 +37,30 @@ class LogIn extends Component {
         return(
         <div id="login">
 
-        <h2>Sign In</h2>
+            <h2>Sign In</h2>
 
-        <form onSubmit={this.handleFormSubmit}>
+            <form onSubmit={this.handleFormSubmit}>
 
-            <fieldset>
+                <fieldset>
 
-            <p><label for="username">Username</label></p>
-            <p><input type="text" id="username" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
+                    <p><label for="username">Username</label></p>
+                    <p><input type="text" id="username" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
 
-            <p><label for="email">E-mail address</label></p>
-            <p><input type="email" id="email" placeholder="mail@address.com" name="email" value={this.state.email} onChange={e => this.handleChange(e)}/></p>
+                    <p><label for="email">E-mail address</label></p>
+                    <p><input type="email" id="email" placeholder="mail@address.com" name="email" value={this.state.email} onChange={e => this.handleChange(e)}/></p>
 
-            <p><label for="password">Password</label></p>
-            <p><input type="password" id="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
+                    <p><label for="password">Password</label></p>
+                    <p><input type="password" id="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
 
-            <p><input type="submit" value="Sign In"/></p>
+                    <p><input type="submit" value="Sign In"/></p>
 
-            </fieldset>
+                </fieldset>
 
-        </form>
+            </form>
 
         </div>
         )
     }
 }
 
-export default LogIn;
+export default SignUp;
