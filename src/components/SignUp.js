@@ -60,3 +60,5 @@ class SignUp extends Component {
 }
 
 export default SignUp;
+
+//This is being imported in "Main.js"

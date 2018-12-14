@@ -3,13 +3,24 @@ import React, { Component } from "react";
 
 
 class Home extends Component {
+    componentDidMount(){
+        document.getElementById('formContent').setAttribute("class", "hide");
+
+        setTimeout(()=>{
+            document.getElementById("title").setAttribute("class", "fadeOut")
+            setTimeout(()=>{
+                document.getElementById("formContent").setAttribute("class", "fadeIn")
+            },100)
+        },2000)
+    }
     render() {
         return(
           <div>
-            <div id="formContent" className="container fadeIn">
-              <div className="row flexCenteredWH">
-                <div className="col-md-4 col-md-pull-7">
-                  <div className="booking-form">
+            <div id="formContent" class="container fadeIn">
+              <div class="row flexCenteredWH">
+                <div class="col-md-4 col-md-pull-7">
+                  <div class="booking-form transparentBackground">
+
                     <form>
                         <div className="form-group">
                             <span className="form-label">Your Destination</span>
