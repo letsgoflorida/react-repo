@@ -30,7 +30,7 @@ class SignUp extends Component {
 			
         return(
         <div className={showHideModalBackground}>
-          <div id="login" className={showHideClassName}>
+          <div className={showHideClassName + " login"}>
             <h2>
               Sign Up <button type="button" className="close" onClick={()=>this.props.hide("modalSignUp")} aria-label="Close"><span className="whiteColor" aria-hidden="true">&times;</span></button>
             </h2>
