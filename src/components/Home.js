@@ -3,6 +3,16 @@ import React, { Component } from "react";
 
 
 class Home extends Component {
+    componentDidMount(){
+        document.getElementById('formContent').setAttribute("class", "hide");
+
+        setTimeout(()=>{
+            document.getElementById("title").setAttribute("class", "fadeOut")
+            setTimeout(()=>{
+                document.getElementById("formContent").setAttribute("class", "fadeIn")
+            },100)
+        },2000)
+    }
     render() {
         return(
           <div>
@@ -10,75 +20,76 @@ class Home extends Component {
               <div class="row flexCenteredWH">
                 <div class="col-md-4 col-md-pull-7">
                   <div class="booking-form transparentBackground">
+
                     <form>
-                        <div class="form-group">
-                            <span class="form-label">Your Destination</span>
-                            <input class="form-control" type="text" placeholder="Enter a destination or hotel name"/>
+                        <div className="form-group">
+                            <span className="form-label">Your Destination</span>
+                            <input className="form-control" type="text" placeholder="Enter a destination or hotel name"/>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <span class="form-label">Check In</span>
-                                    <input class="form-control" type="date" required/>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <div className="form-group">
+                                    <span className="form-label">Check In</span>
+                                    <input className="form-control" type="date" required/>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <span class="form-label">Check out</span>
-                                    <input class="form-control" type="date" required/>
+                            <div className="col-sm-6">
+                                <div className="form-group">
+                                    <span className="form-label">Check out</span>
+                                    <input className="form-control" type="date" required/>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <span class="form-label">Rooms</span>
-                                    <select class="form-control">
+                        <div className="row">
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <span className="form-label">Rooms</span>
+                                    <select className="form-control">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                     </select>
-                                    <span class="select-arrow"></span>
+                                    <span className="select-arrow"></span>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <span class="form-label">Adults</span>
-                                    <select class="form-control">
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <span className="form-label">Adults</span>
+                                    <select className="form-control">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                     </select>
-                                    <span class="select-arrow"></span>
+                                    <span className="select-arrow"></span>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <span class="form-label">Children</span>
-                                    <select class="form-control">
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <span className="form-label">Children</span>
+                                    <select className="form-control">
                                         <option>0</option>
                                         <option>1</option>
                                         <option>2</option>
                                     </select>
-                                    <span class="select-arrow"></span>
+                                    <span className="select-arrow"></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-btn flexCentered">
-                            <button class="submit-btn">Check availability</button>
+                        <div className="form-btn flexCentered">
+                            <button className="submit-btn">Check availability</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>  
-    <div class="flexCenteredWH backgroundImage">   
-       <h1 id="title" class="slideDown">Your journey begins</h1> 
+    <div className="flexCenteredWH backgroundImage">   
+       <h1 id="title" className="slideDown">Your journey begins</h1> 
     </div>
 
-    <div id="aboutUs" class="WH">
+    <div id="aboutUs" className="WH">
         <h1 id="titleAboutUs">About Us</h1>
-        <div id="contentAboutUs" class="flexSpaceEvenlyH">
+        <div id="contentAboutUs" className="flexSpaceEvenlyH">
             <p>CC nerf face check inhibitor counter gank troll sustain bronze fountain kite wow pots CC gap closer BotRK CS DC. Ganks feed queue skintimidation tank red buff such elixir inhibitor trade jukes harass vision cooldown ARAM esports assist double buffs backdoor. Backdoor League of Legends lag fountain banana flash utility push lane ranked golems elixir bush counter masteries global. Banana report runes flash inhibitor double buffs cooldown overextending lore jukes dodge bruiser inhibitor 1v1 overstaying gap closer flash vision CS League of Legends. Fountain 1v1 roam peeling vision glass cannon bait counter gank troll map ARAM trade pink jungle ARAM. Banana fog of war so smurf bait jungle last hit quadrakill last hit lore skins masteries queue global pro strats League of runes banana chase. KS troll dive red buff pentakill sustain inhib queue inhibitor lane nexus ult lane esports ARAM face check assist. Dodge ignite utility assist pro face check towers KS skillshot instalock overstaying dunk banana elixir knockup troll queue poke blue buff 1v1.</p>
             <img src="./stylesheets/shushi.gif" alt=""/>
         </div>
