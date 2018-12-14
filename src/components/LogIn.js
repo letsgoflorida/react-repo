@@ -22,7 +22,6 @@ class LogIn extends Component {
         .catch((err)=>{
             console.log("Sorry something went wrong on submit.", err)
         })
-
     }
 
     render(){

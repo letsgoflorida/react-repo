@@ -11,7 +11,7 @@ blue-hard: (36, 48, 94) */
 
 body {
     font-family: 'Karla', sans-serif;
-    width: 100vw !important;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
@@ -28,7 +28,6 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
-    z-index: 100;
 }
 
 .display-none {
@@ -450,10 +449,7 @@ a.nav-link {
     }
 
     .transparentBackground{
-        background-color: rgba(0,0,0,0.1);
-        -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.45);
-        -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.45);
-        box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.45);
+        background-color: rgba(0,0,0,0.1)
     }
 
 
@@ -473,7 +469,7 @@ a.nav-link {
   box-sizing: inherit  
 }
 
-.login {
+#login {
   position: absolute;
   box-sizing: border-box;
   height: 50%;
@@ -484,7 +480,7 @@ a.nav-link {
 }
 
 
-.login input {
+#login input {
   background-image: none;
   border: none;
   font: inherit;
@@ -493,9 +489,9 @@ a.nav-link {
   transition: all .3s;
 }
 
-/* ---------- login ---------- */
+/* ---------- LOGIN ---------- */
 
-.login h2 {
+#login h2 {
 	background: #f95252;
 	border-radius: 20px 20px 0 0;
 	color: #fff;
@@ -503,47 +499,47 @@ a.nav-link {
 	padding: 20px 26px;
 }
 
-.login h2 span[class*="fontawesome-"] {
+#login h2 span[class*="fontawesome-"] {
 	margin-right: 14px;
 }
 
-.login fieldset {
+#login fieldset {
 	background: #fff;
 	border-radius: 0 0 20px 20px;
-	padding: 26px 26px;
+	padding: 20px 26px;
 }
 
-.login fieldset p {
+#login fieldset p {
 	color: #777;
 	margin-bottom: 18px;
 }
 
-.login fieldset p:last-child {
+#login fieldset p:last-child {
 	margin-bottom: 0;
 }
 
-.login fieldset input {
+#login fieldset input {
     border-radius: 3px;
     margin-top: 0px;
 }
 
-.login fieldset input[type="email"], .login fieldset input[type="password"], .login fieldset input[type="text"] {
+#login fieldset input[type="email"], #login fieldset input[type="password"], #login fieldset input[type="text"] {
 	background: #eee;
-	color:rgb(0,0,0);
+	color: black;
 	padding: 4px 10px;
 	width: 100%;
 }
 
-.login fieldset input[type="submit"] {
+#login fieldset input[type="submit"] {
 	background: #33cc77;
 	color: #fff;
 	display: block;
 	margin: 0 auto;
-	padding: 10px 0;
+	padding: 4px 0;
 	width: 100px;
 }
 
-.login fieldset input[type="submit"]:hover {
+#login fieldset input[type="submit"]:hover {
 	background: #28ad63;
 }
 
@@ -555,28 +551,4 @@ a.nav-link {
 
 .whiteColor {
     color: white
-}
-
-#usernameLabel{
-    margin-top: 0px;
-}
-
-#login {
-    font-size: 20px;
-}
-
-#passwordLabel {
-    margin-top: 35px;
-}
-
-#loginSubmitButton {
-    padding: 13px 0;
-}
-
-.padding10-0 {
-    padding: 10px 0;
-}
-
-.buttonWidth {
-    width: 17vw;
 }

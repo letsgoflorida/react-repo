@@ -14,10 +14,16 @@ class Navbar extends Component {
           </div>
           <ul id="list" className="nav-list">
           { this.props.user ? 
-            <li className="nav-list-item">
-              <button type="button" className="btn btn-demo inactive grow nav-link" data-toggle="modal" data-target="#myModal2">
-              {this.props.user.username} (image) </button>
-            </li>
+            <div>
+              <li className="nav-list-item">
+                <button type="button" className="btn btn-demo inactive grow nav-link" data-toggle="modal" data-target="#myModal2">
+                {this.props.user.username} (image) </button>
+              </li>
+              <li className="nav-list-item">
+                <a className="nav-link grow" onClick={()=>this.props.logout()}>Log Out</a>
+              </li>
+            </div>
+
           :
           <div>
             <li className="nav-list-item">
