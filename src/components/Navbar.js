@@ -21,7 +21,7 @@ class Navbar extends Component {
           </li>
           <li className="nav-list-item">
             <button type="button" className="btn btn-demo inactive grow nav-link" data-toggle="modal" data-target="#myModal2">
-              Oscar (image)
+               Oscar
             </button>
           </li>
         </ul>         
