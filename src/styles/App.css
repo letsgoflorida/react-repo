@@ -425,3 +425,7 @@ a.nav-link {
         margin-bottom: 0px;
         height: 25vh;
     }
+
+    .transparentBackground{
+        background-color: rgba(0,0,0,0.1)
+    }

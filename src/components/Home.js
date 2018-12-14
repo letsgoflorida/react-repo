@@ -9,7 +9,7 @@ class Home extends Component {
             <div id="formContent" class="container fadeIn">
               <div class="row flexCenteredWH">
                 <div class="col-md-4 col-md-pull-7">
-                  <div class="booking-form">
+                  <div class="booking-form transparentBackground">
                     <form>
                         <div class="form-group">
                             <span class="form-label">Your Destination</span>
