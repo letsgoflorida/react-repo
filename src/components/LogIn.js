@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import UserService from "../services/UserService";
 
 
-class SignUp extends Component {
-    state = { username: "", email: "", password: "" };
+class LogIn extends Component {
+    state = { username: "", password: "" };
     service = new UserService();
     
     handleChange = (e) =>{
@@ -14,11 +14,11 @@ class SignUp extends Component {
     handleFormSubmit = (e) =>{
         e.preventDefault();
         // you could just do axios.post('http://localhost:5000/api/signup, {username: this.state.userNameInput, password: this.state.passWordInput}, {withCredentials: true})
-        this.service.signup(this.state.username, this.state.email, this.state.password)
+        this.service.login(this.state.username, this.state.password)
         .then((newUser)=>{
 						// here we wait for the API to give us the user object back after logging in
 						console.log(newUser)
-            this.setState({usernameInput: '', emailInput: "", passwordInput: ''})
+            this.setState({usernameInput: '', passwordInput: ''})
             // then we pass that user object back to app component
             // this.props.logTheUserIntoAppComponent(userFromDB)
             // here, we are getting the user object from the DB
@@ -34,23 +34,20 @@ class SignUp extends Component {
     }
 
     render(){
-				const showHideClassName = this.props.signUp ? "display-block" : "display-none";
+				const showHideClassName = this.props.logIn ? "display-block" : "display-none";
 			
         return(
         <div id="login" className={showHideClassName}>
-          <h2>Sign Up</h2>
+          <h2>Log In</h2>
           <form onSubmit={this.handleFormSubmit}>
             <fieldset>
               <p><label>Username</label></p>
               <p><input type="text" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
 
-              <p><label>E-mail address</label></p>
-              <p><input type="email" placeholder="mail@address.com" name="email" value={this.state.email} onChange={e => this.handleChange(e)}/></p>
-
               <p><label>Password</label></p>
               <p><input type="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
 
-              <p><input type="submit" value="Sign In"/></p>
+              <p><input type="submit" value="Log In"/></p>
             </fieldset>
           </form>
         </div>
@@ -58,6 +55,4 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
-
-//This is being imported in "Main.js"
+export default LogIn;

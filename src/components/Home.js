@@ -16,10 +16,10 @@ class Home extends Component {
     render() {
         return(
           <div>
-            <div id="formContent" class="container fadeIn">
-              <div class="row flexCenteredWH">
-                <div class="col-md-4 col-md-pull-7">
-                  <div class="booking-form transparentBackground">
+            <div id="formContent" className="container fadeIn">
+              <div className="row flexCenteredWH">
+                <div className="col-md-4 col-md-pull-7">
+                  <div className="booking-form transparentBackground">
 
                     <form>
                         <div className="form-group">

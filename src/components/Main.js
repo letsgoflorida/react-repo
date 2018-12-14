@@ -5,6 +5,7 @@ import '../styles/App.css';
 import Home from './Home'
 import Navbar from './Navbar';
 import SignUp from './SignUp';
+import LogIn from "./LogIn"
 import {Route, Switch, Link} from "react-router-dom";
 
 class Main extends Component {
@@ -38,6 +39,7 @@ class Main extends Component {
 								hide={this.hideModal}
 								/>  
                 <SignUp signUp={this.state.modalSignUp}/>
+								<LogIn logIn={this.state.modalLogIn}/>
                 <Switch>
                   <Route path="/" render={(props) => <Home />}/>
                 </Switch>

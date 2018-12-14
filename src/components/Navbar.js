@@ -14,13 +14,10 @@ class Navbar extends Component {
         </div>
         <ul id="list" className="nav-list">
           <li className="nav-list-item">
-            <a className="nav-link grow" onClick={()=>this.props.show("modalSignUp")}>Sign Up For Account</a>
+            <a className="nav-link grow" onClick={()=>this.props.show("modalSignUp")}>Sign Up</a>
           </li>
           <li className="nav-list-item">
-            <a href="#" className="nav-link grow">Log in</a>
-          </li>
-          <li className="nav-list-item">
-            <a href="#" className="nav-link">Welcome Oscar</a>
+            <a className="nav-link grow" onClick={()=>this.props.show("modalLogIn")}>Log in</a>
           </li>
           <li className="nav-list-item">
             <button type="button" className="btn btn-demo inactive grow nav-link" data-toggle="modal" data-target="#myModal2">
