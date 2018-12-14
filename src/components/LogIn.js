@@ -30,21 +30,21 @@ class LogIn extends Component {
 			
         return(
           <div className={showHideModalBackground}>
-            {/* El id de aqui ya lo he cambiado a 'clase', esto es para otra cosa (linea de abajo) */}
+              {/* El id de aqui ya lo he cambiado a 'clase', esto es para otra cosa (linea de abajo) */}
             <div id="login" className={showHideClassName + " login"}>
-          <h2>Log In <button type="button" className="close" aria-label="Close"><span className="whiteColor" aria-hidden="true">&times;</span></button></h2>
-          <form onSubmit={this.handleFormSubmit}>
-            <fieldset>
-              <p id="usernameLabel"><label>Username</label></p>
-              <p><input type="text" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
+              <h2>Log In <button type="button" className="close" aria-label="Close"><span className="whiteColor" aria-hidden="true" onClick={()=>this.props.hide("modalLogIn")}>&times;</span></button></h2>
+              <form onSubmit={this.handleFormSubmit}>
+                <fieldset>
+                  <p id="usernameLabel"><label>Username</label></p>
+                  <p><input type="text" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
 
-              <p id="passwordLabel" ><label>Password</label></p>
-              <p><input type="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
+                  <p id="passwordLabel" ><label>Password</label></p>
+                  <p><input type="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
 
-              <p className="padding10-0"><input className="buttonWidth" type="submit" value="Log In"/></p>
-            </fieldset>
-          </form>
-        </div>
+                  <p className="padding10-0"><input className="buttonWidth" type="submit" value="Log In"/></p>
+                </fieldset>
+              </form>
+            </div>
           </div>
       )
     }
