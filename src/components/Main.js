@@ -3,49 +3,82 @@ import React, { Component } from 'react';
 //Import Components
 import '../styles/App.css';
 import Home from './Home'
+import UserService from "../services/UserService";
 import Navbar from './Navbar';
 import SignUp from './SignUp';
 import LogIn from "./LogIn"
 import {Route, Switch, Link} from "react-router-dom";
 
 class Main extends Component {
-    state = {
-			modalSignUp: false, 
-			modalLogIn: false, 
-			modalProfile: false
-		};
+	state = {
+		loggedUser: false,
+		modalSignUp: false, 
+		modalLogIn: false, 
+		modalProfile: false
+	};
 
-    showModal = (modal) => {
-			console.log(modal)
-			console.log("THIS IS TRUE")
+	service = new UserService()
+
+	componentDidMount(props){
+		this.fetchUser()
+	}
+
+	fetchUser(){
+    this.service.loggedin()
+     .then(loggedUser =>{
       this.setState({
-				[modal]: true
-			})
-    };
-
-    hideModal = (modal) => {
-			console.log("THIS IS FALSE")
+        loggedUser: loggedUser
+      }) 
+    })
+    .catch( err =>{
+      console.log('catch getting hit')
       this.setState({
-				[modal]: false
-			})
-    };
+        loggedUser:  false
+      }) 
+    })
+	}
+		
+	logUser = (user) => {
+		this.setState({loggedUser: user})
+	}
+
+	logout = () =>{
+		this.service.logout().then(()=>{
+			this.setState({loggedUser: false});
+		})
+	}
+
+  showModal = (modal) => {
+		console.log(modal)
+		console.log("THIS IS TRUE")
+    this.setState({
+			[modal]: true
+		})
+  };
+
+  hideModal = (modal) => {
+		console.log("THIS IS FALSE")
+    this.setState({
+			[modal]: false
+		})
+  };
 
 
-    render() {
-        return(
-            <div>
-								<Navbar 
-								show={this.showModal}
-								hide={this.hideModal}
-								/>  
-                <SignUp signUp={this.state.modalSignUp}/>
-								<LogIn logIn={this.state.modalLogIn}/>
-                <Switch>
-                  <Route path="/" render={(props) => <Home />}/>
-                </Switch>
-            </div>
-        )
-    }
+  render() {
+    return(
+      <div>
+				<Navbar 
+				show={this.showModal}
+				user={this.state.loggedUser}
+				/>  
+    	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
+				<LogIn logIn={this.state.modalLogIn} log={this.logUser}/>
+    	  <Switch>
+    	    <Route path="/" render={(props) => <Home />}/>
+    	  </Switch>
+      </div>
+  	)
+  }
 }
 
 export default Main;

@@ -13,22 +13,14 @@ class LogIn extends Component {
 
     handleFormSubmit = (e) =>{
         e.preventDefault();
-        // you could just do axios.post('http://localhost:5000/api/signup, {username: this.state.userNameInput, password: this.state.passWordInput}, {withCredentials: true})
         this.service.login(this.state.username, this.state.password)
-        .then((newUser)=>{
-						// here we wait for the API to give us the user object back after logging in
-						console.log(newUser)
-            this.setState({usernameInput: '', passwordInput: ''})
-            // then we pass that user object back to app component
-            // this.props.logTheUserIntoAppComponent(userFromDB)
-            // here, we are getting the user object from the DB
-            // and we're setting AppComponent.state.loggedinuser equal to it
-            // this.props.history.push('/project-index');
-            // then we redirect
+        .then((loggedUser)=>{
+						console.log(loggedUser)
+            this.setState({usernameInput: "", passwordInput: ""})
+            this.props.log(loggedUser)
         })
         .catch((err)=>{
             console.log("Sorry something went wrong on submit.", err)
-
         })
 
     }
