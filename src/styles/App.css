@@ -525,7 +525,7 @@ a.nav-link {
 
 #login fieldset input[type="email"], #login fieldset input[type="password"], #login fieldset input[type="text"] {
 	background: #eee;
-	color: #777;
+	color: black;
 	padding: 4px 10px;
 	width: 100%;
 }
