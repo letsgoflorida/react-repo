@@ -14,7 +14,7 @@ class SignUp extends Component {
     handleFormSubmit = (e) =>{
         e.preventDefault();
         // you could just do axios.post('http://localhost:5000/api/signup, {username: this.state.userNameInput, password: this.state.passWordInput}, {withCredentials: true})
-        this.service.signup(this.state.username, this.state.email, this.state.password)
+        this.service.signup(this.state.username, this.state.email,  this.state.password)
         .then((newUser)=>{
 						// here we wait for the API to give us the user object back after logging in
 						console.log(newUser)
@@ -32,27 +32,36 @@ class SignUp extends Component {
         })
 
     }
+    componentDidMount(){
+      
+    }
 
     render(){
-				const showHideClassName = this.props.signUp ? "display-block" : "display-none";
+        const showHideClassName = this.props.signUp ? "slideUp" : "display-none";
+        const showHideModalBackground = this.props.signUp ? "display-block" : "display-none"
 			
         return(
-        <div id="login" className={showHideClassName}>
-          <h2>Sign Up</h2>
-          <form onSubmit={this.handleFormSubmit}>
-            <fieldset>
-              <p><label>Username</label></p>
-              <p><input type="text" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
 
-              <p><label>E-mail address</label></p>
-              <p><input type="email" placeholder="mail@address.com" name="email" value={this.state.email} onChange={e => this.handleChange(e)}/></p>
+        <div className={showHideModalBackground}>
+          <div id="login" className={showHideClassName}>
+            <h2>
+              Sign Up <button type="button" className="close" aria-label="Close"><span className="whiteColor" aria-hidden="true">&times;</span></button>
+            </h2>
+            <form onSubmit={this.handleFormSubmit}>
+              <fieldset>
+                <p><label>Username</label></p>
+                <p><input type="text" id="username" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
 
-              <p><label>Password</label></p>
-              <p><input type="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
+                <p><label>E-mail address</label></p>
+                <p><input type="email" id="email" placeholder="mail@address.com" name="email" value={this.state.email} onChange={e => this.handleChange(e)}/></p>
 
-              <p><input type="submit" value="Sign In"/></p>
-            </fieldset>
-          </form>
+                <p><label>Password</label></p>
+                <p><input type="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
+								
+                <p><input type="submit" value="Sign In"/></p>
+              </fieldset>
+            </form>
+          </div>
         </div>
       )
     }
