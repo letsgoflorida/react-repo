@@ -1,5 +1,4 @@
 /* COLORS: 
-
 yellow: (248, 233, 161)
 red: (247, 108, 108)
 light blue: (168, 208, 230)
@@ -25,6 +24,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
+    z-index: 100;
 }
 
 .display-none {
@@ -191,7 +191,7 @@ a.nav-link {
 }
 
 .backgroundImage{
-    background-image: url("../images/background3.jpg");
+    background-image: url("../images/backgroundCorregida.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -306,6 +306,7 @@ a.nav-link {
         -webkit-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
         border-radius: 4px;
+        z-index: 100;
     }
     
     .booking-form .form-group {
@@ -446,7 +447,10 @@ a.nav-link {
     }
 
     .transparentBackground{
-        background-color: rgba(0,0,0,0.1)
+        background-color: rgba(0,0,0,0.1);
+        -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.45);
+        -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.45);
+        box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.45);
     }
 
 
@@ -486,7 +490,7 @@ a.nav-link {
   transition: all .3s;
 }
 
-/* ---------- LOGIN ---------- */
+/* ---------- login ---------- */
 
 .login h2 {
 	background: #f95252;
@@ -503,7 +507,7 @@ a.nav-link {
 .login fieldset {
 	background: #fff;
 	border-radius: 0 0 20px 20px;
-	padding: 20px 26px;
+	padding: 26px 26px;
 }
 
 .login fieldset p {
@@ -522,7 +526,7 @@ a.nav-link {
 
 .login fieldset input[type="email"], .login fieldset input[type="password"], .login fieldset input[type="text"] {
 	background: #eee;
-	color: black;
+	color:rgb(0,0,0);
 	padding: 4px 10px;
 	width: 100%;
 }
@@ -568,4 +572,43 @@ a.nav-link {
 
 .padding10-0 {
     padding: 10px 0;
+}
+
+.logoImage {
+    position: absolute;
+    left: 15px;
+    top: -25px;
+    height: 10vh;
+}
+
+.profile {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  background-color: white;
+  width: 27vw;
+  height: 500px;
+  left: 73%;
+  border-radius: 10px;
+}
+
+.profile h2{
+  font-size: 36px;
+}
+
+#slogan {
+  font-family: 'Amaranth', sans-serif;
+  position: absolute;
+  left: 27%;
+  top: 49px;
+  font-size: 100px;
+  width: 100vw;
+}
+
+.userProfilePicture{
+  width: 130px;
+  margin-top: 15px;
 }

@@ -6,7 +6,8 @@ import Home from './Home'
 import UserService from "../services/UserService";
 import Navbar from './Navbar';
 import SignUp from './SignUp';
-import LogIn from "./LogIn"
+import LogIn from "./LogIn";
+import Profile from "./Profile";
 import {Route, Switch, Link} from "react-router-dom";
 
 class Main extends Component {
@@ -68,6 +69,7 @@ class Main extends Component {
   render() {
     return(
       <div>
+				<Profile />
 				<Navbar 
 				show={this.showModal}
 				user={this.state.loggedUser}

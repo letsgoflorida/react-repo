@@ -5,17 +5,20 @@ import React, { Component } from "react";
 class Home extends Component {
     componentDidMount(){
         document.getElementById('formContent').setAttribute("class", "hide");
+        document.getElementById('slogan').setAttribute("class", "hide");
 
         setTimeout(()=>{
             document.getElementById("title").setAttribute("class", "fadeOut")
             setTimeout(()=>{
                 document.getElementById("formContent").setAttribute("class", "fadeIn")
+                document.getElementById("slogan").setAttribute("class", "fadeIn")
             },100)
         },2000)
     }
     render() {
         return(
           <div>
+          <h1 id="slogan">Let's Go Florida</h1>
             <div id="formContent" className="container fadeIn">
               <div className="row flexCenteredWH">
                 <div className="col-md-4 col-md-pull-7">
