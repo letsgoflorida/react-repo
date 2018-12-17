@@ -15,9 +15,6 @@ body {
     padding: 0;
 }
 
-#root {
-    
-}
 
 .display-block {
     position: absolute;
@@ -194,7 +191,7 @@ a.nav-link {
 }
 
 .backgroundImage{
-    background-image: url("../images/background3.jpg");
+    background-image: url("../images/backgroundCorregida.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -309,6 +306,7 @@ a.nav-link {
         -webkit-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
         border-radius: 4px;
+        z-index: 100;
     }
     
     .booking-form .form-group {
@@ -576,6 +574,76 @@ a.nav-link {
     padding: 10px 0;
 }
 
-.buttonWidth {
-    width: 17vw;
+.logoImage {
+    position: absolute;
+    left: 15px;
+    top: -25px;
+    height: 10vh;
 }
+
+.profile {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 10000;
+  background-color: white;
+  width: 27vw;
+  height: 500px;
+  left: 73%;
+  border-radius: 10px;
+}
+
+.profile h2{
+  font-size: 36px;
+}
+
+#slogan {
+  font-family: 'Amaranth', sans-serif;
+  position: absolute;
+  left: 27%;
+  top: 49px;
+  font-size: 100px;
+  width: 100vw;
+}
+
+.userProfilePicture{
+  width: 130px;
+  margin-top: 15px;
+}
+
+.flexCenteredColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+}
+
+
+.tripsProfilePicture{
+    width: 90px;
+    margin-top: 15px;
+    height: 80px;
+    border: 1px black solid;
+    margin-bottom: 7px;
+  }
+
+  .bubucela {
+      display: flex;
+      width: 25vw;
+  }
+
+  .logOutButton {
+      color: gray;
+  }
+
+  .myTripsText {
+    margin-bottom: -30px;
+  }
+
+  .userText {
+      margin-top: -30px;
+  }

@@ -4,18 +4,21 @@ import Axios from "axios";
 
 
 class Home extends Component {
+
 	state = {destination: ""}
 
-	componentDidMount(){
-		document.getElementById("formContent").setAttribute("class", "hide");
-		
-		setTimeout(()=>{
-			document.getElementById("title").setAttribute("class", "fadeOut")
-			setTimeout(()=>{
-				document.getElementById("formContent").setAttribute("class", "fadeIn")
-			},	100)
-		},	2000)
-	}
+  componentDidMount(){
+    document.getElementById('formContent').setAttribute("class", "hide");
+    document.getElementById('slogan').setAttribute("class", "hide");
+
+    setTimeout(()=>{
+        document.getElementById("title").setAttribute("class", "fadeOut")
+        setTimeout(()=>{
+            document.getElementById("formContent").setAttribute("class", "fadeIn")
+            document.getElementById("slogan").setAttribute("class", "fadeIn")
+        },100)
+    },2000)
+  }
 	
 	handleChange = (e) =>	{
 		this.setState({[e.target.name]: e.target.value})
@@ -47,10 +50,11 @@ class Home extends Component {
   render() {
       return(
         <div>
-          <div id="formContent" className="container fadeIn">
-            <div className="row flexCenteredWH">
-              <div className="col-md-4 col-md-pull-7">
-                <div className="booking-form transparentBackground">
+          <h1 id="slogan">Let's Go Florida</h1>
+            <div id="formContent" className="container fadeIn">
+              <div className="row flexCenteredWH">
+                <div className="col-md-4 col-md-pull-7">
+                  <div className="booking-form transparentBackground">
                   <form onSubmit={this.handleFormSubmit}>
                       <div className="form-group">
                         <span className="form-label">Your Destination</span>

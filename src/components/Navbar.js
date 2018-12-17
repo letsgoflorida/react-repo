@@ -9,9 +9,7 @@ class Navbar extends Component {
     return(
       <div>
         <nav id="navClass" className="main-navigation">
-          <div className="navbar-header animated1 fadeInUp">
-            <a className="navbar-brand" href="index.html#aboutUs">goFlo</a>
-          </div>
+            <img src={require('../images/Jaime_logo-02.png')} alt="logo" className="logoImage animated1 fadeInUp"/>
           <ul id="list" className="nav-list">
           { this.props.user ? 
             <div>
@@ -22,7 +20,6 @@ class Navbar extends Component {
                 <a className="nav-link grow" onClick={()=>this.props.logout()}>Log Out</a>
               </li>
             </div>
-
           :
           <div>
             <li className="nav-list-item">
