@@ -6,10 +6,37 @@ class Profile extends Component{
     render(){
         return(
         <div className="profile">
+        <button type="button" className="close profileCloseButton" aria-label="Close"><span aria-hidden="true" onClick={()=>this.props.hide("modalLogIn")}>&times;</span></button>
+          <div className="userInfo">
             <img src={require('../images/userIcon.png')} alt="logo" className="userProfilePicture"/>
             <h2 className="userText">Oscar</h2>
+          </div>
             <p className="myTripsText">My Trips</p>
             <div className="bubucela">
+              <div className="flexCenteredColumn grow">
+                <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
+                <p>Fort Lauderdale</p>
+              </div>
+              <div className="flexCenteredColumn grow">
+                <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
+                <p>Fort Lauderdale</p>
+              </div>
+              <div className="flexCenteredColumn grow">
+                <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
+                <p>Fort Lauderdale</p>
+              </div>
+              <div className="flexCenteredColumn grow">
+                <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
+                <p>Fort Lauderdale</p>
+              </div>
+              <div className="flexCenteredColumn grow">
+                <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
+                <p>Fort Lauderdale</p>
+              </div>
+              <div className="flexCenteredColumn grow">
+                <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
+                <p>Fort Lauderdale</p>
+              </div>
               <div className="flexCenteredColumn grow">
                 <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
                 <p>Fort Lauderdale</p>
