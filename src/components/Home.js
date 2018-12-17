@@ -28,11 +28,12 @@ class Home extends Component {
       method: "get",
       url: `https://maps.googleapis.com/maps/api/place/textsearch/json?query=hotels+${this.state.destination}&key=AIzaSyBbjZY-3d9gIteLQxlmeDh5lO-Aje46NRM`,
       withCredentials: true,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      }
+      dataType: 'jsonp',
+      cache: false,
+      // headers: {
+      //   "Content-Type": "application/json",
+      //   Accept: "application/json"
+      // }
     })
     .then((location)=>{
 			console.log(location)
