@@ -26,10 +26,9 @@ class Home extends Component {
 		
 	handleFormSubmit = (e) =>{
     e.preventDefault();
-    // Axios.post(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=hotels+${this.state.destination}&key=AIzaSyBbjZY-3d9gIteLQxlmeDh5lO-Aje46NRM`})
     Axios({
       method: "get",
-      url: `https://maps.googleapis.com/maps/api/place/textsearch/json?query=hotels+${this.state.destination}&key=AIzaSyBbjZY-3d9gIteLQxlmeDh5lO-Aje46NRM`,
+      url: `https://maps.googleapis.com/maps/api/place/textsearch/json?query=hotels+${this.state.destination}&`,
       withCredentials: true,
       dataType: 'jsonp',
       cache: false,
