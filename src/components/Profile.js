@@ -7,8 +7,8 @@ class Profile extends Component{
         return(
         <div className="profile">
             <img src={require('../images/userIcon.png')} alt="logo" className="userProfilePicture"/>
-            <h2>Oscar</h2>
-            <p>My Trips</p>
+            <h2 className="userText">Oscar</h2>
+            <p className="myTripsText">My Trips</p>
             <div className="bubucela">
               <div className="flexCenteredColumn grow">
                 <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>

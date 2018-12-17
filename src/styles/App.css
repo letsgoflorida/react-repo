@@ -639,3 +639,11 @@ a.nav-link {
   .logOutButton {
       color: gray;
   }
+
+  .myTripsText {
+    margin-bottom: -30px;
+  }
+
+  .userText {
+      margin-top: -30px;
+  }
