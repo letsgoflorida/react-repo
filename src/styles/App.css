@@ -585,7 +585,7 @@ a.nav-link {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   z-index: 10000;
   background-color: white;
@@ -634,4 +634,8 @@ a.nav-link {
   .bubucela {
       display: flex;
       width: 25vw;
+  }
+
+  .logOutButton {
+      color: gray;
   }

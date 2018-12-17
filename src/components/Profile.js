@@ -22,7 +22,10 @@ class Profile extends Component{
                 <img src={require('../images/jacksonville.jpg')} alt="logo" className="tripsProfilePicture"/>
                 <p>Jacksonville</p>
               </div>
-            </div>     
+            </div>
+            <div>
+              <button type="button" className="logOutButton btn btn-light">Log Out</button>
+            </div>  
         </div>
           )
     }
