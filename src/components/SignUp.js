@@ -22,15 +22,19 @@ class SignUp extends Component {
       .catch((err)=>{
         console.log("Sorry something went wrong on submit.", err)
       })
-    }
-
+		}
+		
+		stopModal = (e) => {
+			e.stopPropagation();
+		}
+		
     render(){
         const showHideClassName = this.props.signUp ? "slideUp" : "display-none";
         const showHideModalBackground = this.props.signUp ? "display-block" : "display-none";
 			
         return(
-        <div className={showHideModalBackground}>
-          <div className={showHideClassName + " login"}>
+        <div className={showHideModalBackground} onClick={(e)=>this.props.hide("modalSignUp")}>
+          <div onClick={(e)=>this.stopModal(e)} className={showHideClassName + " login"}>
             <h2>
               Sign Up <button type="button" className="close" onClick={()=>this.props.hide("modalSignUp")} aria-label="Close"><span className="whiteColor" aria-hidden="true">&times;</span></button>
             </h2>

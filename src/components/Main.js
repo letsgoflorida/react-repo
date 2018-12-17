@@ -20,19 +20,19 @@ class Main extends Component {
 
 	service = new UserService()
 
-	componentDidMount(props){
+	componentDidMount(){
 		this.fetchUser()
 	}
 
 	fetchUser(){
-    this.service.loggedin()
-     .then(loggedUser =>{
+		this.service.loggedin()
+		.then(loggedUser =>{
       this.setState({
         loggedUser: loggedUser
       }) 
     })
     .catch( err =>{
-      console.log('catch getting hit')
+			console.log(err)
       this.setState({
         loggedUser:  false
       }) 
@@ -40,7 +40,11 @@ class Main extends Component {
 	}
 		
 	logUser = (user) => {
+		this.fetchUser()
+		console.log("_+_+_+_++__+_+",user)
+		if(!user.message === "Incorrect username"){
 		this.setState({loggedUser: user})
+		}
 	}
 
 	logout = () =>{
@@ -69,11 +73,17 @@ class Main extends Component {
   render() {
     return(
       <div>
-				<Profile />
+				<Profile 
+					profile={this.state.modalProfile} 
+					user={this.state.loggedUser} 
+					hide={this.hideModal} 
+					logout={this.logout}
+				/>
+
 				<Navbar 
-				show={this.showModal}
-				user={this.state.loggedUser}
-				logout={this.logout}
+					show={this.showModal}
+					user={this.state.loggedUser}
+					logout={this.logout}
 				/>  
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
