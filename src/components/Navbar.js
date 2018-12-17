@@ -14,7 +14,7 @@ class Navbar extends Component {
           { this.props.user ? 
             <div>
               <li className="nav-list-item">
-                <a className="nav-link grow"> {this.props.user.username} (image)</a>
+                <a className="nav-link grow" onClick={()=>this.props.show("modalProfile")}> {this.props.user.username} <img src={require('../images/userIcon.png')} alt="logo"/></a>
               </li>
               <li className="nav-list-item">
                 <a className="nav-link grow" onClick={()=>this.props.logout()}>Log Out</a>

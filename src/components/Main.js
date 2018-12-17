@@ -73,11 +73,17 @@ class Main extends Component {
   render() {
     return(
       <div>
-				<Profile />
+				<Profile 
+					profile={this.state.modalProfile} 
+					user={this.state.loggedUser} 
+					hide={this.hideModal} 
+					logout={this.logout}
+				/>
+
 				<Navbar 
-				show={this.showModal}
-				user={this.state.loggedUser}
-				logout={this.logout}
+					show={this.showModal}
+					user={this.state.loggedUser}
+					logout={this.logout}
 				/>  
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
