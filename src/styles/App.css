@@ -612,3 +612,26 @@ a.nav-link {
   width: 130px;
   margin-top: 15px;
 }
+
+.flexCenteredColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+}
+
+
+.tripsProfilePicture{
+    width: 90px;
+    margin-top: 15px;
+    height: 80px;
+    border: 1px black solid;
+    margin-bottom: 7px;
+  }
+
+  .bubucela {
+      display: flex;
+      width: 25vw;
+  }
