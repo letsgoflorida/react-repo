@@ -41,15 +41,33 @@ class Main extends Component {
 		
 	logUser = (user) => {
 		this.fetchUser()
-		console.log("_+_+_+_++__+_+",user)
-		if(!user.message === "Incorrect username"){
-		this.setState({loggedUser: user})
+		console.log(user)
+		if(user.message === "Incorrect username"){
+			document.getElementById('wrongUsernameMessage').removeAttribute("class", "display-none");
+			setTimeout(function(){document.getElementById('wrongUsernameMessage').setAttribute("class", "fadeOut");},2000);
+			setTimeout(function(){document.getElementById('wrongUsernameMessage').setAttribute("class", "display-none");},3000);
+		} else if(user.message === "Incorrect password"){
+			document.getElementById('wrongPasswordMessage').removeAttribute("class", "display-none");
+			setTimeout(function(){document.getElementById('wrongPasswordMessage').setAttribute("class", "fadeOut");},2000);
+			setTimeout(function(){document.getElementById('wrongPasswordMessage').setAttribute("class", "display-none");},3000);
+		} else{
+			document.getElementById('loggedInMessage').removeAttribute("class", "display-none");
+			setTimeout(function(){document.getElementById('loggedInMessage').setAttribute("class", "fadeOut");},3000);
+			setTimeout(function(){document.getElementById('loggedInMessage').setAttribute("class", "display-none");},4000);
+		this.setState({
+			loggedUser: user,
+			modalSignUp: false, 
+			modalLogIn: false 
+		})
 		}
 	}
 
 	logout = () =>{
 		this.service.logout()
 		.then(()=>{
+			document.getElementById('logedOutMessage').removeAttribute("class", "display-none");
+			setTimeout(function(){document.getElementById('logedOutMessage').setAttribute("class", "fadeOut");},3000)
+			setTimeout(function(){document.getElementById('logedOutMessage').setAttribute("class", "display-none");},5000);
 			this.setState({loggedUser: false});
 		})
 	}

@@ -1,9 +1,9 @@
 /* COLORS: 
-yellow: (248, 233, 161)
-red: (247, 108, 108)
-light blue: (168, 208, 230)
-blue: (55, 71, 133)
-blue-hard: (36, 48, 94) */
+yellow: rgb(248, 233, 161)
+red: rgb(247,108,108)
+light blue: rgb(168, 208, 230)
+blue: rgb(55, 71, 133)
+blue-hard: rgb(36, 48, 94) */
 
 
 @import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
@@ -378,7 +378,7 @@ a.nav-link {
     .booking-form .submit-btn {
         display: inline-block;
         color: #fff;
-        background-color: #1e62d8;
+        background-color: rgb(55, 71, 133);
         font-weight: 700;
         padding: 14px 30px;
         border-radius: 4px;
@@ -493,7 +493,7 @@ a.nav-link {
 /* ---------- login ---------- */
 
 .login h2 {
-	background: #f95252;
+	background:rgb(247,108,108);
 	border-radius: 20px 20px 0 0;
 	color: #fff;
 	font-size: 28px;
@@ -532,7 +532,7 @@ a.nav-link {
 }
 
 .login fieldset input[type="submit"] {
-	background: #33cc77;
+	background:rgb(55, 71, 133) ;
 	color: #fff;
 	display: block;
 	margin: 0 auto;
@@ -541,7 +541,7 @@ a.nav-link {
 }
 
 .login fieldset input[type="submit"]:hover {
-	background: #28ad63;
+	background: rgb(168, 208, 230);
 }
 
 /* END OF FORM */
@@ -556,6 +556,9 @@ a.nav-link {
 
 #usernameLabel{
     margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 #login {
@@ -563,7 +566,11 @@ a.nav-link {
 }
 
 #passwordLabel {
-    margin-top: 35px;
+    /* margin-top: 35px; */
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 #loginSubmitButton {
@@ -657,4 +664,32 @@ a.nav-link {
       position: absolute;
       left: 15px;
       top: 5px;
+  }
+
+  .profileImage {
+      height: 5vh;
+  }
+
+  #profileInfo {
+      padding: 10px;
+  }
+
+  #logedOutMessage {
+    position: absolute;
+    left: 42%;
+    top: 10px;
+  }
+
+  #loggedInMessage {
+    position: absolute;
+    left: 42%;
+    top: 10px;
+  }
+
+  /* #wrongUsernameMessage {
+      position: absolute;
+  } */
+
+  .noMargin {
+      margin: 0px;
   }

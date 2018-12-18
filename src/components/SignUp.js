@@ -49,7 +49,7 @@ class SignUp extends Component {
                 <p><label>Password</label></p>
                 <p><input type="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
 
-                <p><input type="submit" value="Sign In" onClick={()=>this.props.hide("modalSignUp")}/></p>
+                <p><input type="submit" value="Sign In" /></p>
               </fieldset>
             </form>
           </div>

@@ -15,7 +15,6 @@ class LogIn extends Component {
         e.preventDefault();
         this.service.login(this.state.username, this.state.password)
         .then((loginUser)=>{
-						console.log(loginUser)
             this.setState({usernameInput: "", passwordInput: ""})
             this.props.log(loginUser)
         })
@@ -39,13 +38,16 @@ class LogIn extends Component {
               <h2>Log In <button type="button" className="close" aria-label="Close"><span className="whiteColor" aria-hidden="true" onClick={()=>this.props.hide("modalLogIn")}>&times;</span></button></h2>
               <form onSubmit={this.handleFormSubmit}>
                 <fieldset>
-                  <p id="usernameLabel"><label>Username</label></p>
-                  <p><input type="text" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
+                        <p id="usernameLabel"><label>Username</label><p id="wrongUsernameMessage" className="display-none"><div className="alert alert-danger noMargin" role="alert">Wrong Username</div></p>
+                        </p>
+                        
+                  <p><input required type="text" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
 
-                  <p id="passwordLabel" ><label>Password</label></p>
-                  <p><input type="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
+                  <p id="passwordLabel" ><label>Password</label><p id="wrongPasswordMessage" className="display-none"><div className="alert alert-danger noMargin" role="alert">Wrong Password</div></p></p>
 
-                  <p className="padding10-0"><input className="buttonWidth" type="submit" value="Log In" onClick={()=>this.props.hide("modalLogIn")}/></p>
+                  <p><input required type="password" placeholder="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></p>
+
+                  <p className="padding10-0"><input className="buttonWidth" type="submit" value="Log In"/></p>
                 </fieldset>
               </form>
             </div>
