@@ -8,6 +8,7 @@ import Navbar from './Navbar';
 import SignUp from './SignUp';
 import LogIn from "./LogIn";
 import Profile from "./Profile";
+import Create from "./Create"
 import {Route, Switch, Link} from "react-router-dom";
 
 class Main extends Component {
@@ -106,7 +107,8 @@ class Main extends Component {
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
-    	    <Route path="/" render={(props) => <Home />}/>
+    	    {/* <Route path="/" render={(props) => <Home />}/> */}
+					<Route path="/" render={(props) => <Create />}/>
     	  </Switch>
       </div>
   	)
