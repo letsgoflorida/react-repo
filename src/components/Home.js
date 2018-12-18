@@ -1,11 +1,14 @@
 //Import React
 import React, { Component } from "react";
+import GoogleService from "../services/GoogleService";
 import Axios from "axios";
 
 
 class Home extends Component {
 
 	state = {destination: ""}
+
+  service = new GoogleService();
 
   componentDidMount(){
     document.getElementById('formContent').setAttribute("class", "hide");
@@ -26,17 +29,7 @@ class Home extends Component {
 		
 	handleFormSubmit = (e) =>{
     e.preventDefault();
-    Axios({
-      method: "get",
-      url: `https://maps.googleapis.com/maps/api/place/textsearch/json?query=hotels+${this.state.destination}&`,
-      withCredentials: true,
-      dataType: 'jsonp',
-      cache: false,
-      // headers: {
-      //   "Content-Type": "application/json",
-      //   Accept: "application/json"
-      // }
-    })
+    this.service.locationInfo(this.state.destination)
     .then((location)=>{
 			console.log(location)
       this.setState({destination: ""})

@@ -4,7 +4,7 @@ import UserService from "../services/UserService";
 
 
 class SignUp extends Component {
-    state = { username: "", email: "", password: "" };
+    state = {username: "", email: "", password: "" };
     service = new UserService();
     
     handleChange = (e) =>{

@@ -12,7 +12,7 @@ class Profile extends Component{
       <button type="button" className="close profileCloseButton" aria-label="Close"><span aria-hidden="true" onClick={()=>this.props.hide("modalProfile")}>&times;</span></button>
       <div className="userInfo">
         <img src={require('../images/userIcon.png')} alt="logo" className="userProfilePicture"/>
-        <h2 className="userText">Oscar</h2>
+        <h2 className="userText">{this.props.user.username}</h2>
       </div>
       <p className="myTripsText">My Trips</p>
         <div className="bubucela">
