@@ -1,8 +1,6 @@
 //Import React
 import React, { Component } from "react";
 import GoogleService from "../services/GoogleService";
-import Axios from "axios";
-
 
 class Home extends Component {
 
@@ -30,8 +28,8 @@ class Home extends Component {
 	handleFormSubmit = (e) =>{
     e.preventDefault();
     this.service.locationInfo(this.state.destination)
-    .then((location)=>{
-			console.log(location)
+    .then((destinationInfo)=>{
+      console.log(destinationInfo)
       this.setState({destination: ""})
     })
     .catch((err)=>
