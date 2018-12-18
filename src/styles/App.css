@@ -411,14 +411,26 @@ a.nav-link {
 
     /* END OF FORM CSS */
 
+    #contentAboutUs {
+        height: 530px;
+    }
+
     
     #contentAboutUs p {
         width: 50vw;
     }
+
+    #aboutUs {
+        background-image: url("../images/bird.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      
+    }
     
     #aboutUs img{
-        height: 413px;
-        width: 50vw;
+        height: 250px;
+        width: 25vw;
+        border: 1px black solid;
     }
 
     #titleAboutUs {
@@ -428,6 +440,7 @@ a.nav-link {
         align-items: center;
         margin-bottom: 0px;
         height: 25vh;
+        font-size: 100px;
     }
 
     .flexSpaceEvenlyH{
@@ -693,3 +706,44 @@ a.nav-link {
   .noMargin {
       margin: 0px;
   }
+
+  .textAboutUs{
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .aboutUsPictures{
+      width: 25vw;
+  }
+
+  .aboutUsContactInfo {
+    width: 66vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: -50px;
+  }
+
+  /* PHOTOS FOR THE CREATE PAGE */
+
+  .blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
+
+.maxWidth{
+    max-width:100%;
+}
