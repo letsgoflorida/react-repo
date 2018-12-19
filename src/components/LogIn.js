@@ -39,8 +39,7 @@ class LogIn extends Component {
               <form onSubmit={this.handleFormSubmit}>
                 <fieldset>
                         <p id="usernameLabel"><label>Username</label><p id="wrongUsernameMessage" className="display-none"><div className="alert alert-danger noMargin" role="alert">Wrong Username</div></p>
-                        </p>
-                        
+                        </p>        
                   <p><input required type="text" placeholder="username" name="username" value={this.state.username} onChange={e => this.handleChange(e)} /></p>
 
                   <p id="passwordLabel" ><label>Password</label><p id="wrongPasswordMessage" className="display-none"><div className="alert alert-danger noMargin" role="alert">Wrong Password</div></p></p>

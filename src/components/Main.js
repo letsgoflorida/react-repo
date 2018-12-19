@@ -10,13 +10,15 @@ import LogIn from "./LogIn";
 import Profile from "./Profile";
 import Create from "./Create"
 import {Route, Switch, Link} from "react-router-dom";
+const axios = require("axios")
 
 class Main extends Component {
 	state = {
 		loggedUser: false,
 		modalSignUp: false, 
 		modalLogIn: false, 
-		modalProfile: false
+		modalProfile: false,
+		destinationInfo: {}
 	};
 
 	service = new UserService()
@@ -88,17 +90,16 @@ class Main extends Component {
 		})
   };
 
-
   render() {
     return(
       <div>
+				{/* <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=AIzaSyAAvIITz7r16HjYey8HVfIxfhXw29EdS0w"/> */}
 				<Profile 
 					profile={this.state.modalProfile} 
 					user={this.state.loggedUser} 
 					hide={this.hideModal} 
 					logout={this.logout}
 				/>
-
 				<Navbar 
 					show={this.showModal}
 					user={this.state.loggedUser}
