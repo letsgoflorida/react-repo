@@ -107,8 +107,8 @@ class Main extends Component {
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
-    	    {/* <Route path="/" render={(props) => <Home />}/> */}
-					<Route path="/" render={(props) => <Create />}/>
+    	    <Route path="/" render={(props) => <Home />}/>
+					{/* <Route path="/" render={(props) => <Create />}/> */}
     	  </Switch>
       </div>
   	)
