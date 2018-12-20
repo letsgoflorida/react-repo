@@ -37,16 +37,8 @@ class Profile extends Component{
             <p>Fort Lauderdale</p>
           </div>
           <div className="flexCenteredColumn grow">
-            <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>Fort Lauderdale</p>
-          </div>
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>Fort Lauderdale</p>
-          </div>
-          <div className="flexCenteredColumn grow">
             <img src={require('../images/wpm.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>W. Palm Beach</p>
+            <p>West Palm Beach</p>
           </div>
           <div className="flexCenteredColumn grow">
             <img src={require('../images/jacksonville.jpg')} alt="logo" className="tripsProfilePicture"/>
