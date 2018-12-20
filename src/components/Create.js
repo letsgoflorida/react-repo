@@ -143,7 +143,7 @@ class Create extends Component {
       </div>
       <div className="hotelsInfo">
           <h2 className="createTitles">Activities</h2>
-          <img src={require('../images/restaurant.png')} alt="logo" className="restaurantIcon"/>
+          <img src={require('../images/bike.png')} alt="logo" className="restaurantIcon"/>
       </div>
       <div class="container createPictureContainer">
           <div class="row blog">
