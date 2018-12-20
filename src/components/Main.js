@@ -10,7 +10,8 @@ import LogIn from "./LogIn";
 import Profile from "./Profile";
 import Create from "./Create"
 import {Route, Switch, Link} from "react-router-dom";
-const axios = require("axios")
+import GoogleService from "../services/GoogleService";
+
 
 class Main extends Component {
 	state = {
@@ -18,17 +19,19 @@ class Main extends Component {
 		modalSignUp: false, 
 		modalLogIn: false, 
 		modalProfile: false,
-		destinationInfo: {}
+		destination: {},
+
 	};
 
-	service = new UserService()
+	userService = new UserService()
+	googleService = new GoogleService();
 
 	componentDidMount(){
 		this.fetchUser()
 	}
 
 	fetchUser(){
-		this.service.loggedin()
+		this.userService.loggedin()
 		.then(loggedUser =>{
       this.setState({
         loggedUser: loggedUser
@@ -66,7 +69,7 @@ class Main extends Component {
 	}
 
 	logout = () =>{
-		this.service.logout()
+		this.userService.logout()
 		.then(()=>{
 			document.getElementById('logedOutMessage').removeAttribute("class", "display-none");
 			setTimeout(function(){document.getElementById('logedOutMessage').setAttribute("class", "fadeOut");},3000)
@@ -75,6 +78,18 @@ class Main extends Component {
 		})
 	}
 
+	submitForm = (destination) => {
+		this.googleService.locationInfo(destination)
+    .then((destinationInfo)=>{
+      this.setState({
+        destinationDetails: destinationInfo
+      })
+    })
+    .catch((err)=>
+      console.log("Sorry something went wrong on submit.", err)
+		)
+
+	}
   showModal = (modal) => {
 		console.log(modal)
 		console.log("THIS IS TRUE")
@@ -93,7 +108,6 @@ class Main extends Component {
   render() {
     return(
       <div>
-				{/* <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=AIzaSyAAvIITz7r16HjYey8HVfIxfhXw29EdS0w"/> */}
 				<Profile 
 					profile={this.state.modalProfile} 
 					user={this.state.loggedUser} 
@@ -108,8 +122,8 @@ class Main extends Component {
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
-    	    {/* <Route path="/" render={(props) => <Home />}/> */}
-					<Route path="/" render={(props) => <Create />}/>
+    	    <Route path="/" render={(props) => <Home {...props} submitForm={this.submitForm} destinationDetails={this.state.destination} />}/>
+					{/* <Route path="/" render={(props) => <Create />}/> */}
     	  </Switch>
       </div>
   	)

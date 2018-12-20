@@ -4,14 +4,15 @@ import GoogleService from "../services/GoogleService";
 
 class Home extends Component {
 
-	state = {destination: ""}
+	state = {
+    destination: "",
+  }
 
   service = new GoogleService();
 
   componentDidMount(){
-    document.getElementById('formContent').setAttribute("class", "hide");
-    document.getElementById('slogan').setAttribute("class", "hide");
-
+    document.getElementById("formContent").setAttribute("class", "hide");
+    document.getElementById("slogan").setAttribute("class", "hide");
     setTimeout(()=>{
         document.getElementById("title").setAttribute("class", "fadeOut")
         setTimeout(()=>{
@@ -27,14 +28,10 @@ class Home extends Component {
 		
 	handleFormSubmit = (e) =>{
     e.preventDefault();
-    this.service.locationInfo(this.state.destination)
-    .then((destinationInfo)=>{
-      console.log(destinationInfo)
-      this.setState({destination: ""})
+    this.props.submitForm(this.state.destination)
+    this.setState({
+      destination: ""
     })
-    .catch((err)=>
-      console.log("Sorry something went wrong on submit.", err)
-		)
 	}
 
   render() {
