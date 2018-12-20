@@ -30,6 +30,7 @@ class Home extends Component {
     this.setState({
       destination: ""
     })
+    this.props.history.push("/create")
 	}
 
   render() {

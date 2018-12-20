@@ -83,7 +83,7 @@ class Main extends Component {
     .then((destinationInfo)=>{
       this.setState({
         destination: destinationInfo
-      })
+			})
     })
     .catch((err)=>
       console.log("Sorry something went wrong on submit.", err)
@@ -122,8 +122,8 @@ class Main extends Component {
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
-    	    <Route path="/" render={(props) => <Home {...props} submitForm={this.submitForm}  />}/>
-					{/* <Route path="/" render={(props) => <Create destinationDetails={this.state.destination} />}/> */}
+    	    <Route exact path="/" render={(props) => <Home {...props} submitForm={this.submitForm}  />}/>
+					<Route exact path="/create" render={(props) => <Create {...props} destinationDetails={this.state.destination} />}/>
     	  </Switch>
       </div>
   	)

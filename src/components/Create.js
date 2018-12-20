@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 
 
 class Create extends Component {
+  state = {
+    destination: this.props.destinationDetails
+  }
   render(){
     return(
       <div>
