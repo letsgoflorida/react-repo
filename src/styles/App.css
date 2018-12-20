@@ -611,7 +611,7 @@ a.nav-link {
 }
 
 .profile {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -622,6 +622,7 @@ a.nav-link {
   min-height: 500px;
   left: 73%;
   border-radius: 10px;
+  border: 1px black solid;
 }
 
 .profile h2{
@@ -755,4 +756,28 @@ background: #707070;
 
 .maxWidth{
     max-width:100%;
+}
+
+.createPictureContainer {
+    padding: 40px;
+}
+
+.cityTitleCreate {
+    font-size: 150px;
+    margin-bottom: 30px;
+}
+
+.createTitles {
+    font-size: 25px;
+    padding-left: 150px;
+}
+
+.restaurantIcon {
+    height: 5vh;
+    padding-left: 10px;
+}
+
+.hotelsInfo {
+    display: flex;
+    align-items: center;
 }
