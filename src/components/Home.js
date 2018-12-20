@@ -1,6 +1,5 @@
 //Import React
 import React, { Component } from "react";
-import GoogleService from "../services/GoogleService";
 
 class Home extends Component {
 
@@ -8,7 +7,6 @@ class Home extends Component {
     destination: "",
   }
 
-  service = new GoogleService();
 
   componentDidMount(){
     document.getElementById("formContent").setAttribute("class", "hide");
@@ -46,8 +44,7 @@ class Home extends Component {
                       <div className="form-group">
                         <span className="form-label">Your Destination</span>
                         <input className="form-control" type="text" name="destination" placeholder="Miami" value={this.state.destination} onChange={e => this.handleChange(e)}/>
-                      </div>
-                     
+                      </div>       
                       
                       <div className="form-btn flexCentered">
                         <button className="submit-btn">Check availability</button>

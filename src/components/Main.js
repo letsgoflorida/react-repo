@@ -82,7 +82,7 @@ class Main extends Component {
 		this.googleService.locationInfo(destination)
     .then((destinationInfo)=>{
       this.setState({
-        destinationDetails: destinationInfo
+        destination: destinationInfo
       })
     })
     .catch((err)=>
@@ -122,8 +122,8 @@ class Main extends Component {
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
-    	    <Route path="/" render={(props) => <Home {...props} submitForm={this.submitForm} destinationDetails={this.state.destination} />}/>
-					{/* <Route path="/" render={(props) => <Create />}/> */}
+    	    <Route path="/" render={(props) => <Home {...props} submitForm={this.submitForm}  />}/>
+					{/* <Route path="/" render={(props) => <Create destinationDetails={this.state.destination} />}/> */}
     	  </Switch>
       </div>
   	)
