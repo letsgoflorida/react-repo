@@ -755,7 +755,8 @@ background: #707070;
 }
 
 .maxWidth{
-    max-width:100%;
+    width: 250px;
+    height: 250px;
 }
 
 .createPictureContainer {
