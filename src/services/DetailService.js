@@ -13,8 +13,8 @@ class DetailService {
     this.service = service;
   }
 
-  createDetail = (detail) => {
-    return this.service.post("/new", {detail})
+  createDetail = (detail, trip) => {
+    return this.service.post("/new", {detail, trip})
     .then(response => response.data)
   }
 

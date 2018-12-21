@@ -30,6 +30,13 @@ class Main extends Component {
 		this.fetchUser()
 	}
 
+	deleteState = () => {
+		this.setState({
+			destinationInfo: false,
+			destination: false
+		})
+	}
+
 	fetchUser(){
 		this.userService.loggedin()
 		.then(loggedUser =>{
@@ -89,8 +96,8 @@ class Main extends Component {
     .catch((err)=>
       console.log("Sorry something went wrong on submit.", err)
 		)
-
 	}
+	
   showModal = (modal) => {
 		console.log(modal)
 		console.log("THIS IS TRUE")
@@ -123,7 +130,11 @@ class Main extends Component {
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
-    	    <Route exact path="/" render={(props) => <Home {...props} submitForm={this.submitForm}  user={this.state.loggedUser}/>}/>
+					<Route exact path="/" 
+						render={(props) => <Home {...props} 
+						submitForm={this.submitForm}  
+						user={this.state.loggedUser}
+						reset={this.deleteState}/>}/>
 					<Route exact path="/create" 
 						render={(props) => <Create {...props} 
 						destinationDetails={this.state.destinationInfo} 

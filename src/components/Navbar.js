@@ -9,7 +9,7 @@ class Navbar extends Component {
     return(
       <div>
         <nav id="navClass" className="main-navigation">
-            <img src={require('../images/Jaime_logo-02.png')} alt="logo" className="logoImage animated1 fadeInUp"/>
+           <Link to="/"><img src={require('../images/Jaime_logo-02.png')} alt="logo" className="logoImage animated1 fadeInUp"/></Link>
           <ul id="list" className="nav-list">
             <div id="logedOutMessage" className="display-none">
               <div className="slideDown alert alert-danger" role="alert">

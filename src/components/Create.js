@@ -12,7 +12,7 @@ class Create extends Component {
     hotels: "",
     restaurants: "",
     activities: "",
-    tripHotel: {},
+    tripHotel: false,
     tripRestaurants: [],
     tripActivities: [],
     createdTrip: {}
@@ -22,8 +22,8 @@ class Create extends Component {
   detailService = new DetailService();
   
   createDetails = (option) => {
-    option.trip_id = this.state.createdTrip._id
-    this.detailService.createDetail(option);
+    
+    this.detailService.createDetail(option, this.state.createdTrip._id);
   }
 
   submitTrip = (e) => {
@@ -329,7 +329,7 @@ class Create extends Component {
           }
           return(
             <div class="col-md-3">
-              <div>
+              <div onClick={(e)=>this.chosenActivity(e, eachActivity)}>
                 <img src={eachActivity.photos} alt="" class="maxWidth" />
                 <div id="infoAboutEachHotel">
                   <p className="hotelName">- {eachActivity.name}</p>
@@ -345,6 +345,39 @@ class Create extends Component {
         })
         return secondActivityList
       }
+  selectedHotel = () => {
+    if(this.state.tripHotel){
+    return(
+      <div className="flexCentered">
+        <img src={this.state.tripHotel.photo} alt="" class="footerImage" />
+        <div className="paddingLeft">
+          <p className="hotelName marginBottom">{this.state.tripHotel.name}</p>
+          <p className="marginBottom">${this.state.tripHotel.price} per night</p>
+          <div className="flexCenteredStar marginBottom">
+            <p>{this.state.tripHotel.rating}</p>
+            <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
+          </div>
+        </div>
+      </div>
+    )
+    }
+  }
+
+  selectedRestaurants = () => {
+    return this.state.tripRestaurants.map((restaurant)=>{
+      return(
+        <li className="marginBottom">- {restaurant.name}</li>
+      )
+    })
+  }
+
+  selectedActivities = () => {
+    return this.state.tripActivities.map((activity)=>{
+      return(
+        <li className="marginBottom">- {activity.name}</li>
+      )
+    })
+  }
 
   render(){
     return(
@@ -445,36 +478,22 @@ class Create extends Component {
         </div>
       }
       <div>
-        <nav className="navbar fixed-bottom budgetFooter">
-          
-          <div className="flexCentered">
-            <img src={require('../images/wpm.jpg')} alt="" class="footerImage" />
-            <div className="paddingLeft">
-              <p className="hotelName marginBottom">Hotel Transilvania</p>
-              <p className="marginBottom">160$ per night</p>
-              <div className="flexCenteredStar marginBottom">
-                <p>4.5</p>
-                <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
-              </div>
-            </div>
-          </div>
+        <form className="navbar fixed-bottom budgetFooter" onSubmit={(e)=> this.submitTrip(e)}>
+          {this.selectedHotel()}
           <div>
             <p className="hotelName marginBottom">Restaurants:</p>
             <ul>
-              <li className="marginBottom">- Wendy's</li>
-              <li className="marginBottom">- Subway</li>
-              <li classNme="marginBottom">- Venezuelan Foodtruck</li>
+              {this.selectedRestaurants()}
             </ul>
           </div>
           <div>
             <p className="hotelName marginBottom">Activities:</p>
             <ul>
-              <li className="marginBottom">- Swiming with tigers</li>
-              <li className="marginBottom">- Dancing with latinos</li>
-              <li className="marginBottom">- Walk in the beach</li>
+              {this.selectedActivities()}
             </ul>
           </div>
-        </nav> 
+          <button type="submit" className="btn btn-warning" >Create Trip </button>
+        </form> 
       </div>
     </div>
     )

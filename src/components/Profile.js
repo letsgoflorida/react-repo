@@ -49,42 +49,6 @@ class Profile extends Component{
       <p className="myTripsText">My Trips</p>
         <div className="bubucela">
           {this.showProfile()}
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>Fort Lauderdale</p>
-          </div>
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>Fort Lauderdale</p>
-          </div>
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>Fort Lauderdale</p>
-          </div>
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>Fort Lauderdale</p>
-          </div>
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>Fort Lauderdale</p>
-          </div>
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/wpm.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>West Palm Beach</p>
-          </div>
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/jacksonville.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>Jacksonville</p>
-          </div>
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/wpm.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>W. Palm Beach</p>
-          </div>
-          <div className="flexCenteredColumn grow">
-            <img src={require('../images/jacksonville.jpg')} alt="logo" className="tripsProfilePicture"/>
-            <p>Jacksonville</p>
-          </div>
         </div>
         <div>
           <button type="button" className="logOutButton btn btn-light" onClick={()=>{this.props.hide("modalProfile"); this.props.logout()}}>Log Out</button>

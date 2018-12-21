@@ -18,6 +18,7 @@ class Home extends Component {
             document.getElementById("slogan").setAttribute("class", "fadeIn")
         },100)
     },2000)
+    this.props.reset();
   }
 	
 	handleChange = (e) =>	{
