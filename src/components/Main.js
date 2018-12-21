@@ -10,7 +10,8 @@ import LogIn from "./LogIn";
 import Profile from "./Profile";
 import Create from "./Create"
 import {Route, Switch, Link} from "react-router-dom";
-const axios = require("axios")
+import GoogleService from "../services/GoogleService";
+
 
 class Main extends Component {
 	state = {
@@ -18,17 +19,19 @@ class Main extends Component {
 		modalSignUp: false, 
 		modalLogIn: false, 
 		modalProfile: false,
-		destinationInfo: {}
+		destination: {},
+
 	};
 
-	service = new UserService()
+	userService = new UserService()
+	googleService = new GoogleService();
 
 	componentDidMount(){
 		this.fetchUser()
 	}
 
 	fetchUser(){
-		this.service.loggedin()
+		this.userService.loggedin()
 		.then(loggedUser =>{
       this.setState({
         loggedUser: loggedUser
@@ -66,7 +69,7 @@ class Main extends Component {
 	}
 
 	logout = () =>{
-		this.service.logout()
+		this.userService.logout()
 		.then(()=>{
 			document.getElementById('logedOutMessage').removeAttribute("class", "display-none");
 			setTimeout(function(){document.getElementById('logedOutMessage').setAttribute("class", "fadeOut");},3000)
@@ -75,6 +78,18 @@ class Main extends Component {
 		})
 	}
 
+	submitForm = (destination) => {
+		this.googleService.locationInfo(destination)
+    .then((destinationInfo)=>{
+      this.setState({
+        destination: destinationInfo
+			})
+    })
+    .catch((err)=>
+      console.log("Sorry something went wrong on submit.", err)
+		)
+
+	}
   showModal = (modal) => {
 		console.log(modal)
 		console.log("THIS IS TRUE")
@@ -107,8 +122,8 @@ class Main extends Component {
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
-    	    {/* <Route path="/" render={(props) => <Home />}/> */}
-					<Route path="/" render={(props) => <Create />}/>
+    	    <Route exact path="/" render={(props) => <Home {...props} submitForm={this.submitForm}  />}/>
+					<Route exact path="/create" render={(props) => <Create {...props} destinationDetails={this.state.destination} />}/>
     	  </Switch>
       </div>
   	)

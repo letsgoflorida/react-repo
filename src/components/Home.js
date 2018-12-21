@@ -1,17 +1,16 @@
 //Import React
 import React, { Component } from "react";
-import GoogleService from "../services/GoogleService";
 
 class Home extends Component {
 
-	state = {destination: ""}
+	state = {
+    destination: "",
+  }
 
-  service = new GoogleService();
 
   componentDidMount(){
-    document.getElementById('formContent').setAttribute("class", "hide");
-    document.getElementById('slogan').setAttribute("class", "hide");
-
+    document.getElementById("formContent").setAttribute("class", "hide");
+    document.getElementById("slogan").setAttribute("class", "hide");
     setTimeout(()=>{
         document.getElementById("title").setAttribute("class", "fadeOut")
         setTimeout(()=>{
@@ -27,14 +26,11 @@ class Home extends Component {
 		
 	handleFormSubmit = (e) =>{
     e.preventDefault();
-    this.service.locationInfo(this.state.destination)
-    .then((destinationInfo)=>{
-      console.log(destinationInfo)
-      this.setState({destination: ""})
+    this.props.submitForm(this.state.destination)
+    this.setState({
+      destination: ""
     })
-    .catch((err)=>
-      console.log("Sorry something went wrong on submit.", err)
-		)
+    this.props.history.push("/create")
 	}
 
   render() {
@@ -49,8 +45,7 @@ class Home extends Component {
                       <div className="form-group">
                         <span className="form-label">Your Destination</span>
                         <input className="form-control" type="text" name="destination" placeholder="Miami" value={this.state.destination} onChange={e => this.handleChange(e)}/>
-                      </div>
-                     
+                      </div>       
                       
                       <div className="form-btn flexCentered">
                         <button className="submit-btn">Check availability</button>
