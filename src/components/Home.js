@@ -62,7 +62,13 @@ class Home extends Component {
   					<div id="aboutUs" className="WH">
     					<h1 id="titleAboutUs">About Us</h1>
               <div id="contentAboutUs" className="flexSpaceEvenlyH">
-                <p className="textAboutUs">CC nerf face check inhibitor counter gank troll sustain bronze fountain kite wow pots CC gap closer BotRK CS DC. Ganks feed queue skintimidation tank red buff such elixir inhibitor trade jukes harass vision cooldown ARAM esports assist double buffs backdoor. Backdoor League of Legends lag fountain banana flash utility push lane ranked golems elixir bush counter masteries global. Banana report runes flash inhibitor double buffs cooldown overextending lore jukes dodge bruiser inhibitor 1v1 overstaying gap closer flash vision CS League of Legends. Fountain 1v1 roam peeling vision glass cannon bait counter gank troll map ARAM trade pink jungle ARAM. Banana fog of war so smurf bait jungle last hit quadrakill last hit lore skins masteries queue global pro strats League of runes banana chase. KS troll dive red buff pentakill sustain inhib queue inhibitor lane nexus ult lane esports ARAM face check assist. Dodge ignite utility assist pro face check towers KS skillshot instalock overstaying dunk banana elixir knockup troll queue poke blue buff 1v1.</p>
+                <p className="textAboutUs"><span className="hotelName">Jaime Jacobo</span>: After graduating from my Psychology degree in Spain, I decided to join a Web Development Full Stack Bootcamp in Miami to guide my life towards what I like to do most in my life: programming. 
+                  <br />
+                  <br />
+                  <span className="hotelName">Oscar Pachano</span>: After spending part of my life to the service and care of patient as a M.D. I decided to change the course of my life and guide it towards a new found passion for programming and web development.
+                  <br />
+                  <br />
+                 For this project, we decided to work together to consolidate all the knowledge that we have acquired during an intensive JavaScript Bootcamp. We felt inspired on the idea of creating a website that shows all of our passion. After presenting this project, our desire of growing as developers has been increasing and we are sure this is just the beggining of an amazing journey. </p>
                 <div className="aboutUsPictures">
                   {/* <img src="./stylesheets/shushi.gif" alt=""/> */}
                   <img src={require('../images/fotoJaime.jpg')} alt="fotoJaime"/>
