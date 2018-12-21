@@ -1034,3 +1034,22 @@ background: #707070;
   #detailsName {
       margin-bottom: 0px;
   }
+
+  .flexEvenly{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+  }
+
+  #finalBudgetText{
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 30px;
+  }
+
+  .absolute{
+    position: absolute;
+    left: 1250px;
+    top: 100px;
+  }

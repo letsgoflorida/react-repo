@@ -24,7 +24,10 @@ class TripDetails extends Component {
     return(
       <div className="flexCenteredWH">
         <div className="detailsContent">
-          <h1 id="detailsName">Miami</h1>
+          <div className="flexEvenly">
+            <h1 id="detailsName">Miami</h1>
+            <p id="finalBudgetText">Final Budget: 145$</p>
+          </div>
             <div className="satan">
               <div class="col-md-3">
                 <img src={require("../images/image3.jpg")} alt="hola" className="maxWidth" />
@@ -62,6 +65,7 @@ class TripDetails extends Component {
             
           </div>
         </div>
+        <button type="button" className="absolute btn btn-danger">Danger</button>
       </div>
     )
   }
