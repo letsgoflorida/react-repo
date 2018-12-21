@@ -19,8 +19,8 @@ class Main extends Component {
 		modalSignUp: false, 
 		modalLogIn: false, 
 		modalProfile: false,
-		destination: {},
-
+		destinationInfo: false,
+		destination: ""
 	};
 
 	userService = new UserService()
@@ -82,7 +82,8 @@ class Main extends Component {
 		this.googleService.locationInfo(destination)
     .then((destinationInfo)=>{
       this.setState({
-        destination: destinationInfo
+				destinationInfo: destinationInfo,
+				destination: destination
 			})
     })
     .catch((err)=>
@@ -123,7 +124,11 @@ class Main extends Component {
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
     	    <Route exact path="/" render={(props) => <Home {...props} submitForm={this.submitForm}  />}/>
-					<Route exact path="/create" render={(props) => <Create {...props} destinationDetails={this.state.destination} />}/>
+					<Route exact path="/create" 
+						render={(props) => <Create {...props} 
+						destinationDetails={this.state.destinationInfo} 
+						destination={this.state.destination}
+						/>}/>
     	  </Switch>
       </div>
   	)
