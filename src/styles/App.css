@@ -829,6 +829,7 @@ background: #707070;
   
   .ball{
     background:#333;
+    border: 1px black solid;
     width:100px;
     height:100px;
     float:left;
