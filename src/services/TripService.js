@@ -21,6 +21,11 @@ class TripService {
     .then(response => response.data)
   }
 
+  tripInfo = (trip) => {
+    return this.service.post("/detail", {trip})
+    .then(response => response.data)
+  }
+
 }
 
 export default TripService;

@@ -25,15 +25,22 @@ class Profile extends Component{
     
   showProfile = () => {
     if(this.state.userInfo.trips){
+    let counter = 0
     return this.state.userInfo.trips.map((trip)=>{
+      counter++ 
       return(
-        <div className="flexCenteredColumn grow">
-          <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
-          <p>{trip.location}</p>
-        </div>
+        <a href={"/trip"} onClick={()=>{this.props.id(trip._id)}}>
+          <div className="flexCenteredColumn grow">
+            <img src={require(`../images/image${counter}.jpg`)} alt="logo" className="tripsProfilePicture" onClick={(e)=>this.getTripDetail(trip)}/>
+            <p>{trip.location}</p>
+          </div>
+        </a>
       )
     })
   }
+  }
+
+  getTripDetail = (trip) => {
   }
 
   render(){

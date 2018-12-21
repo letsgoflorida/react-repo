@@ -35,6 +35,7 @@ class Create extends Component {
     this.state.tripActivities.forEach((activity)=>{
       this.createDetails(activity)
     })
+    this.props.history.push("/trip")
   }
 
   componentWillMount(){

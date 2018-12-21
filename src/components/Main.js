@@ -11,6 +11,7 @@ import Profile from "./Profile";
 import Create from "./Create"
 import {Route, Switch, Link} from "react-router-dom";
 import GoogleService from "../services/GoogleService";
+import TripDetails from './TripDetails';
 
 
 class Main extends Component {
@@ -20,7 +21,8 @@ class Main extends Component {
 		modalLogIn: false, 
 		modalProfile: false,
 		destinationInfo: false,
-		destination: ""
+		destination: "",
+		trip: false
 	};
 
 	userService = new UserService();
@@ -30,6 +32,11 @@ class Main extends Component {
 		this.fetchUser()
 	}
 
+	tripId = (trip_id) => {
+		this.setState({
+			trip: trip_id
+		})
+	}
 	deleteState = () => {
 		this.setState({
 			destinationInfo: false,
@@ -117,6 +124,7 @@ class Main extends Component {
     return(
       <div>
 				<Profile 
+					trip={this.tripId}
 					profile={this.state.modalProfile} 
 					user={this.state.loggedUser} 
 					hide={this.hideModal} 
@@ -130,6 +138,8 @@ class Main extends Component {
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
+					<Route path="/trip" 
+						render={(props)=> <TripDetails {...props} tripId={this.state.trip}/>}/>
 					<Route exact path="/" 
 						render={(props) => <Home {...props} 
 						submitForm={this.submitForm}  
