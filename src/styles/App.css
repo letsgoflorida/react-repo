@@ -757,10 +757,22 @@ background: #707070;
 .maxWidth{
     width: 250px;
     height: 250px;
+    border: 1px black solid;
+    -webkit-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
 }
 
 .createPictureContainer {
-    padding: 40px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
+    background-color: rgba(240, 240, 240, 0.5);
+
+
 }
 
 .cityTitleCreate {
@@ -771,6 +783,8 @@ background: #707070;
 .createTitles {
     font-size: 25px;
     padding-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .restaurantIcon {
@@ -784,16 +798,22 @@ background: #707070;
 }
 
 .budgetFooter {
-    background-color: rgb(248, 233, 161);
-    height: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(237, 239, 242);
+    height: 22vh;
     width: 90vw;
     margin: 0 auto;
     border: 1px black solid;
     margin-bottom: 10px;
+    -webkit-box-shadow: 0px 7px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 30px 0px rgba(0,0,0,0.75);
 }
 
 .height {
     height: 216vh;
+    background-image: url("../images/gradient.jpg");
 }
 
 /* CSS FOR THE WAITING ANIMATION  */
@@ -809,6 +829,7 @@ background: #707070;
   
   .ball{
     background:#333;
+    border: 1px black solid;
     width:100px;
     height:100px;
     float:left;
@@ -974,4 +995,21 @@ background: #707070;
   .flexCenteredStar {
       display: flex;
       align-items: center;
+  }
+
+  .footerImage {
+    width: 140px;
+    height: 140px;
+    border: 1px black solid;
+    -webkit-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
+  }
+
+  .paddingLeft {
+    padding-left: 10px;
+  }
+
+  .marginBottom {
+      margin-bottom: 15px;
   }

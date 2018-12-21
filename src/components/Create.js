@@ -445,8 +445,35 @@ class Create extends Component {
         </div>
       }
       <div>
-       <nav className="navbar fixed-bottom budgetFooter">
-          <p>Hola</p>
+        <nav className="navbar fixed-bottom budgetFooter">
+          
+          <div className="flexCentered">
+            <img src={require('../images/wpm.jpg')} alt="" class="footerImage" />
+            <div className="paddingLeft">
+              <p className="hotelName marginBottom">Hotel Transilvania</p>
+              <p className="marginBottom">160$ per night</p>
+              <div className="flexCenteredStar marginBottom">
+                <p>4.5</p>
+                <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p className="hotelName marginBottom">Restaurants:</p>
+            <ul>
+              <li className="marginBottom">- Wendy's</li>
+              <li className="marginBottom">- Subway</li>
+              <li classNme="marginBottom">- Venezuelan Foodtruck</li>
+            </ul>
+          </div>
+          <div>
+            <p className="hotelName marginBottom">Activities:</p>
+            <ul>
+              <li className="marginBottom">- Swiming with tigers</li>
+              <li className="marginBottom">- Dancing with latinos</li>
+              <li className="marginBottom">- Walk in the beach</li>
+            </ul>
+          </div>
         </nav> 
       </div>
     </div>
