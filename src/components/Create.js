@@ -6,6 +6,46 @@ class Create extends Component {
   render(){
     return(
       <div className="height">
+        {/* WAITING-TO-LOAD-PAGE ANIMATION FROM HERE:  */}
+
+        {/* <div className="flexCenteredColumnWH">
+           <div id="loadingImage">
+          <div class="cord leftMove">
+            <div class="ball"></div>
+          </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord rightMove">
+            <div class="ball" id="first"></div>
+          </div>
+          <div class="shadowsWaitAnimation">
+            <div class="leftShadow"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="rightShadow"></div>
+          </div>
+        </div>
+        <div className="loadingMessage">Loading...</div>
+        </div> */}
+
+        {/* TO HERE */}
+       
         <div className="flexCentered cityTitleCreate">
           <h1>Fort Lauderdale</h1>
         </div>
@@ -25,9 +65,17 @@ class Create extends Component {
                   <div className="carousel-item active">
                     <div className="row">
                       <div className="col-md-3">
-                        <a href="#">
+                        <div>
                           <img src="http://placehold.it/250x250" alt="" className="maxWidth" />
-                        </a>
+                          <div id="infoAboutEachHotel">
+                            <p className="hotelName">- Hotel Pachano Company</p>
+                            <p>- Very Expensive</p>
+                            <div className="flexCenteredStar">
+                             <p>- Dos estrellas</p>
+                             <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div className="col-md-3">
                         <p>

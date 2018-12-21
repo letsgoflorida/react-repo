@@ -788,8 +788,189 @@ background: #707070;
     width: 90vw;
     margin: 0 auto;
     border: 1px black solid;
+    margin-bottom: 10px;
 }
 
 .height {
     height: 180vh;
 }
+
+/* CSS FOR THE WAITING ANIMATION  */
+
+.cord{
+    padding-top:100px;
+    width:100px;
+    transform: rotate(0deg);
+    transform-origin:50% 50%;
+    float:left;
+  }
+  
+  
+  .ball{
+    background:#333;
+    width:100px;
+    height:100px;
+    float:left;
+    border-radius:50%;
+  }
+  
+  .shadowsWaitAnimation{
+    clear:left;
+    padding-top:20px;
+    margin-left:-2px;
+  }
+  
+  .shadowsWaitAnimation div{
+    float:left;
+    margin-left: 2px;
+    width:100px;
+    height:3px;
+    border-radius:50%;
+    box-shadow: 0px 0px 3px rgba(204, 204, 204, 0.3);
+    background: rgba(204, 204, 204, 0.3);
+  }
+  
+  .leftMove{
+    animation: leftBall .5s ease-in-out 0s infinite alternate;
+  }
+  .rightMove{
+    animation: rightBall .5s ease-in-out 0s infinite alternate;
+  }
+  
+  
+  .leftShadow{
+    animation: leftShadowN .5s ease-in-out 0s infinite alternate; 
+  }
+  .rightShadow{
+    animation: rightShadowN .5s ease-in-out 0s infinite alternate; 
+  }
+  
+  
+  @keyframes leftBall
+  {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+    }
+
+  50% {
+    transform: rotate(0deg) translateY(0px);
+    }
+  100% {
+    transform: rotate(50deg) translateY(-20px);
+    }
+  
+  }
+  
+  @keyframes rightBall
+  {
+  0% {
+    transform: rotate(-50deg) translateY(-20px);
+    }
+
+  50% {
+    transform: rotate(0deg) translateY(0px);
+    }
+  100% {
+    transform: rotate(0deg) translateY(0px)
+        translateX(0px);
+    }
+  
+  }
+  
+  @keyframes leftShadowN
+  {
+  0% {
+  transform: translateX(0px);
+      
+      
+    }
+ 
+  50% {
+    transform: translateX(0px);
+  
+    }
+  
+  100% {
+    
+  transform: translateX(-25px);
+    }
+  
+  }
+  
+  @keyframes rightShadowN
+  {
+  0% {
+    transform: translateX(25px);
+    }
+  
+  50% {
+    transform: translateY(0px);
+  
+    }
+  
+  100% {
+    transform: translateY(0px);
+  
+    }
+  
+  }
+  
+  
+  
+  
+  /*colors*/
+  
+  .cord:nth-of-type(1) .ball{
+    background:rgb(36, 48, 94);
+  }
+  .cord:nth-of-type(2) .ball{
+    background:rgb(55, 71, 133);
+  }
+  .cord:nth-of-type(3) .ball{
+    background:rgb(168, 208, 230);
+  }
+  .cord:nth-of-type(4) .ball{
+    background:rgb(197, 168, 230);
+  }
+  .cord:nth-of-type(5) .ball{
+    background:rgb(247,108,108);
+  }
+  .cord:nth-of-type(6) .ball{
+    background:rgb(235, 86, 86);
+  }
+  .cord:nth-of-type(7) .ball{
+    background:rgb(248, 233, 161);
+  }
+
+
+  /* END OF THE WAITING ANIMATION EFFECT  */
+
+  .loadingMessage {
+      font-size: 60px;
+  }
+
+  .flexCenteredColumnWH {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 90vh;
+  }
+
+  .hotelName {
+      font-weight: bold;
+  }
+
+  #infoAboutEachHotel p {
+      padding: 3px 0;
+  }
+
+  .starIcon {
+      height: 3vh;
+  }
+
+  .flexCenteredStar {
+      display: flex;
+      align-items: center;
+  }
