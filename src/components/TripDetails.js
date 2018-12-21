@@ -65,7 +65,7 @@ class TripDetails extends Component {
             
           </div>
         </div>
-        <button type="button" className="absolute btn btn-danger">Danger</button>
+        <button type="button" className="absolute btn btn-danger">Delete Trip</button>
       </div>
     )
   }
