@@ -777,7 +777,19 @@ background: #707070;
     padding-left: 10px;
 }
 
-.hotelsInfo {
+.createInfo {
     display: flex;
     align-items: center;
+}
+
+.budgetFooter {
+    background-color: rgb(248, 233, 161);
+    height: 15vh;
+    width: 90vw;
+    margin: 0 auto;
+    border: 1px black solid;
+}
+
+.height {
+    height: 180vh;
 }
