@@ -757,6 +757,7 @@ background: #707070;
 .maxWidth{
     width: 250px;
     height: 250px;
+    border: 1px black solid;
 }
 
 .createPictureContainer {
@@ -793,7 +794,7 @@ background: #707070;
 }
 
 .height {
-    height: 180vh;
+    height: 216vh;
 }
 
 /* CSS FOR THE WAITING ANIMATION  */
