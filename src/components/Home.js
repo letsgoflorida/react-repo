@@ -26,11 +26,13 @@ class Home extends Component {
 		
 	handleFormSubmit = (e) =>{
     e.preventDefault();
+    if(this.props.user){
     this.props.submitForm(this.state.destination)
     this.setState({
       destination: ""
     })
     this.props.history.push("/create")
+    }
 	}
 
   render() {

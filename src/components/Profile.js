@@ -1,9 +1,41 @@
 //Import React
 import React, { Component } from "react";
+import UserService from "../services/UserService";
 
 
 class Profile extends Component{
+  state = {
+    userInfo: ""
+  }
+
+  componentWillMount(){
+    this.getProfile();
+  }
+
+  service = new UserService();
+
+  getProfile = () => {
+    this.service.getUser()
+    .then((user)=>{
+      this.setState({
+        userInfo: user,
+      })
+    })
+  }
     
+  showProfile = () => {
+    if(this.state.userInfo.trips){
+    return this.state.userInfo.trips.map((trip)=>{
+      return(
+        <div className="flexCenteredColumn grow">
+          <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
+          <p>{trip.location}</p>
+        </div>
+      )
+    })
+  }
+  }
+
   render(){
     const showHideClassName = this.props.profile ? "profile slideLeft" : "display-none"
 
@@ -16,6 +48,7 @@ class Profile extends Component{
       </div>
       <p className="myTripsText">My Trips</p>
         <div className="bubucela">
+          {this.showProfile()}
           <div className="flexCenteredColumn grow">
             <img src={require('../images/fort.jpg')} alt="logo" className="tripsProfilePicture"/>
             <p>Fort Lauderdale</p>

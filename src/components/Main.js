@@ -23,7 +23,7 @@ class Main extends Component {
 		destination: ""
 	};
 
-	userService = new UserService()
+	userService = new UserService();
 	googleService = new GoogleService();
 
 	componentDidMount(){
@@ -123,7 +123,7 @@ class Main extends Component {
     	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
 				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
     	  <Switch>
-    	    <Route exact path="/" render={(props) => <Home {...props} submitForm={this.submitForm}  />}/>
+    	    <Route exact path="/" render={(props) => <Home {...props} submitForm={this.submitForm}  user={this.state.loggedUser}/>}/>
 					<Route exact path="/create" 
 						render={(props) => <Create {...props} 
 						destinationDetails={this.state.destinationInfo} 

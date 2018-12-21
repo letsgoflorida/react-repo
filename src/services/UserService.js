@@ -5,7 +5,7 @@ class UserService {
 
   constructor() {
     let service = axios.create({
-      baseURL: "http://localhost:5000/api/user",
+      baseURL: process.env.REACT_APP_API_URL + "/user",
       withCredentials: true
     });
 
@@ -27,6 +27,10 @@ class UserService {
     .then(response => response.data)
   }
 
+  getUser = () => {
+    return this.service.post("/getUser")
+    .then(response => response.data)
+  }
 
   loggedin = () =>{
     return this.service.get("/loggedin")

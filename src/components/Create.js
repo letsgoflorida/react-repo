@@ -1,5 +1,7 @@
 //Import React
 import React, { Component } from 'react';
+import TripService from "../services/TripService";
+import DetailService from "../services/DetailService";
 
 
 class Create extends Component {
@@ -13,16 +15,43 @@ class Create extends Component {
     tripHotel: {},
     tripRestaurants: [],
     tripActivities: [],
+    createdTrip: {}
   }
+
+  tripService = new TripService();
+  detailService = new DetailService();
   
+  createDetails = (option) => {
+    option.trip_id = this.state.createdTrip._id
+    this.detailService.createDetail(option);
+  }
+
+  submitTrip = (e) => {
+    e.preventDefault();
+    this.createDetails(this.state.tripHotel)
+    this.state.tripRestaurants.forEach((restaurant)=>{
+      this.createDetails(restaurant)
+    })
+    this.state.tripActivities.forEach((activity)=>{
+      this.createDetails(activity)
+    })
+  }
 
   componentWillMount(){
-    this.getInfo()
+    this.getInfo();
+    setTimeout(()=>{
+      this.tripService.newTrip(this.props.destination)
+      .then((trip)=>{
+        this.setState({
+          createdTrip: trip
+        })
+      })
+    }, 10000)
   }
 
   getInfo = () => {
     setTimeout(()=>{
-      if(this.props.destinationDetails){
+      if(this.props.destinationDetails){;
       this.setState({
         destinationInfo: this.props.destinationDetails,
         destination: this.props.destination,
@@ -85,10 +114,10 @@ class Create extends Component {
   chosenHotel = (e, hotel) => {
       this.setState({
         tripHotel: {
-          Name: hotel.name, 
-          Photo: hotel.photos,
-          Price: hotel.price_level,
-          Rating: hotel.rating
+          name: hotel.name, 
+          photo: hotel.photos,
+          price: hotel.price_level,
+          rating: hotel.rating
         }
       })
     }
