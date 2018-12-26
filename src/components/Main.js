@@ -1,6 +1,5 @@
-//Import React
+
 import React, { Component } from 'react';
-//Import Components
 import '../styles/App.css';
 import Home from './Home'
 import UserService from "../services/UserService";

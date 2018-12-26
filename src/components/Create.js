@@ -75,40 +75,40 @@ class Create extends Component {
   showLoader = () => {
     return(
       <div className="flexCenteredColumnWH">
-            <div id="loadingImage">
-              <div class="cord leftMove">
-                <div class="ball"></div>
-              </div>
-              <div class="cord">
-                <div class="ball"></div>
-              </div>
-              <div class="cord">
-                <div class="ball"></div>
-              </div>
-              <div class="cord">
-                <div class="ball"></div>
-              </div>
-              <div class="cord">
-                <div class="ball"></div>
-              </div>
-              <div class="cord">
-                <div class="ball"></div>
-              </div>
-              <div class="cord rightMove">
-                <div class="ball" id="first"></div>
-              </div>
-              <div class="shadowsWaitAnimation">
-                <div class="leftShadow"></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div class="rightShadow"></div>
-              </div>
-            </div>
-            <div className="loadingMessage">Loading...</div>
+        <div id="loadingImage">
+          <div class="cord leftMove">
+            <div class="ball"></div>
           </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord">
+            <div class="ball"></div>
+          </div>
+          <div class="cord rightMove">
+            <div class="ball" id="first"></div>
+          </div>
+          <div class="shadowsWaitAnimation">
+            <div class="leftShadow"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="rightShadow"></div>
+          </div>
+        </div>
+        <div className="loadingMessage">Loading...</div>
+      </div>
     )
   }
 
