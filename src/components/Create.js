@@ -196,10 +196,10 @@ class Create extends Component {
             <div onClick={(e)=>this.chosenHotel(e, eachHotel)}>
               <img src={eachHotel.photos} alt="" class="maxWidth" />
               <div id="infoAboutEachHotel">
-                <p className="hotelName">- {eachHotel.name}</p>
-                  <p>- ${eachHotel.price_level} per night</p>
+                <p className="hotelName">{eachHotel.name}</p>
+                  <p>${eachHotel.price_level} per night</p>
                   <div className="flexCenteredStar">
-                    <p>- {eachHotel.rating}</p>
+                    <p>{eachHotel.rating}</p>
                     <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
                   </div>
               </div>
@@ -390,7 +390,7 @@ class Create extends Component {
         :
         <div>
           <div className="flexCentered cityTitleCreate">
-            <h1>{this.props.destination}</h1>
+            <h1 className="coolFont">{this.props.destination}</h1>
           </div>
           <div className="createInfo">
             <h2 className="createTitles">Hotels</h2>

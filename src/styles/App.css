@@ -447,6 +447,7 @@ a.nav-link {
     }
 
     #titleAboutUs {
+        font-family: Bavro;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -763,13 +764,15 @@ background: #707070;
     width: 250px;
     height: 250px;
     border: 1px black solid;
+    border-radius: 200px;
     -webkit-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
 }
 
 .createPictureContainer {
-    padding: 10px;
+    padding: 20px 0;
+    padding-left: 10px;
     border: 1px solid black;
     border-radius: 10px;
     -webkit-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
@@ -800,6 +803,7 @@ background: #707070;
 .createInfo {
     display: flex;
     align-items: center;
+    padding: 10px 0;
 }
 
 .budgetFooter {
@@ -817,7 +821,7 @@ background: #707070;
 }
 
 .height {
-    height: 216vh;
+    height: 230vh;
     background-image: url("../images/gradient.jpg");
 }
 
@@ -989,6 +993,10 @@ background: #707070;
       font-weight: bold;
   }
 
+  #infoAboutEachHotel {
+      text-align: center;
+  }
+
   #infoAboutEachHotel p {
       padding: 3px 0;
   }
@@ -1000,6 +1008,7 @@ background: #707070;
   .flexCenteredStar {
       display: flex;
       align-items: center;
+      justify-content: center;
   }
 
   .footerImage {
@@ -1068,4 +1077,9 @@ background: #707070;
 
   .tripDetailsBackground{
     background-image: url("../images/gradient.jpg"); 
+  }
+
+  .coolFont {
+      font-family: Brux;
+      font-size: 130px;
   }
