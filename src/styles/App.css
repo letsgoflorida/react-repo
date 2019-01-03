@@ -770,6 +770,10 @@ background: #707070;
     box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
 }
 
+.maxWidth:hover{
+    cursor: pointer;
+}
+
 .createPictureContainer {
     padding: 20px 0;
     padding-left: 10px;
@@ -995,6 +999,7 @@ background: #707070;
 
   #infoAboutEachHotel {
       text-align: center;
+      padding-top: 5px;
   }
 
   #infoAboutEachHotel p {
@@ -1022,6 +1027,10 @@ background: #707070;
 
   .paddingLeft {
     padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .marginBottom {

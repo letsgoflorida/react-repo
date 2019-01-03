@@ -221,10 +221,10 @@ class Create extends Component {
             <div onClick={(e)=>this.chosenHotel(e, eachHotel)}>
               <img src={eachHotel.photos} alt="" class="maxWidth" />
               <div id="infoAboutEachHotel">
-                <p className="hotelName">- {eachHotel.name}</p>
-                  <p>- ${eachHotel.price_level} per night</p>
+                <p className="hotelName">{eachHotel.name}</p>
+                  <p>${eachHotel.price_level} per night</p>
                   <div className="flexCenteredStar">
-                    <p>- {eachHotel.rating}</p>
+                    <p>{eachHotel.rating}</p>
                     <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
                   </div>
               </div>
@@ -248,10 +248,10 @@ class Create extends Component {
             <div onClick={(e)=>this.chosenRestaurant(e, eachRestaurant)}>
               <img src={eachRestaurant.photos} alt="" class="maxWidth" />
               <div id="infoAboutEachHotel">
-                <p className="hotelName">- {eachRestaurant.name}</p>
-                  <p>- ${eachRestaurant.price_level} per person</p>
+                <p className="hotelName">{eachRestaurant.name}</p>
+                  <p>${eachRestaurant.price_level} per person</p>
                   <div className="flexCenteredStar">
-                    <p>- {eachRestaurant.rating}</p>
+                    <p>{eachRestaurant.rating}</p>
                     <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
                   </div>
               </div>
@@ -275,10 +275,10 @@ class Create extends Component {
             <div onClick={(e)=>this.chosenRestaurant(e, eachRestaurant)}>
               <img src={eachRestaurant.photos} alt="" class="maxWidth" />
               <div id="infoAboutEachHotel">
-                <p className="hotelName">- {eachRestaurant.name}</p>
-                  <p>- ${eachRestaurant.price_level} per person</p>
+                <p className="hotelName">{eachRestaurant.name}</p>
+                  <p>${eachRestaurant.price_level} per person</p>
                   <div className="flexCenteredStar">
-                    <p>- {eachRestaurant.rating}</p>
+                    <p>{eachRestaurant.rating}</p>
                     <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
                   </div>
               </div>
@@ -304,10 +304,10 @@ class Create extends Component {
             <div onClick={(e)=>this.chosenActivity(e, eachActivity)}>
               <img src={eachActivity.photos} alt="" class="maxWidth" />
               <div id="infoAboutEachHotel">
-                <p className="hotelName">- {eachActivity.name}</p>
-                  <p>- ${eachActivity.price_level} per person</p>
+                <p className="hotelName">{eachActivity.name}</p>
+                  <p>${eachActivity.price_level} per person</p>
                   <div className="flexCenteredStar">
-                    <p>- {eachActivity.rating}</p>
+                    <p>{eachActivity.rating}</p>
                     <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
                   </div>
               </div>
@@ -333,10 +333,10 @@ class Create extends Component {
               <div onClick={(e)=>this.chosenActivity(e, eachActivity)}>
                 <img src={eachActivity.photos} alt="" class="maxWidth" />
                 <div id="infoAboutEachHotel">
-                  <p className="hotelName">- {eachActivity.name}</p>
-                    <p>- ${eachActivity.price_level} per person</p>
+                  <p className="hotelName">{eachActivity.name}</p>
+                    <p>${eachActivity.price_level} per person</p>
                     <div className="flexCenteredStar">
-                      <p>- {eachActivity.rating}</p>
+                      <p>{eachActivity.rating}</p>
                       <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
                     </div>
                 </div>
