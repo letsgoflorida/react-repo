@@ -8,6 +8,11 @@ blue-hard: rgb(36, 48, 94) */
 
 @import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
 
+@font-face { font-family: Bavro; src: url('fonts/Bavro-Regular.ttf'); }
+@font-face { font-family: Kungfont; src: url('fonts/Kungfont-Regular.otf'); }
+@font-face { font-family: Brux; src: url('fonts/BRUX-Regular.otf'); } 
+
+
 body {
   font-family: 'Karla', sans-serif;
   width: 100vw;
@@ -1031,6 +1036,7 @@ background: #707070;
   }
 
   #detailsName {
+      font-family: Brux;
       margin-bottom: 0px;
   }
 
@@ -1044,14 +1050,14 @@ background: #707070;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px black solid;
     padding: 5px;
     border-radius: 5px;
     font-size: 30px;
   }
 
   #finalBudgetText img {
-      width: 50px;
+      width: 45px;
+      margin-right: 10px;
   }
 
   .absolute{
