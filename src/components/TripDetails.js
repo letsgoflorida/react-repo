@@ -47,10 +47,10 @@ class TripDetails extends Component {
               <div class="col-md-3">
                 <img src={require("../images/image3.jpg")} alt="hola" className="maxWidth" />
                 <div id="infoAboutEachHotel">
-                  <p className="hotelName">- Hotel Bubucela</p>
-                  <p>- $250 per night</p>
+                  <p className="hotelName">Hotel Bubucela</p>
+                  <p>$250 per night</p>
                   <div className="flexCenteredStar">
-                    <p>- 4.5</p>
+                    <p>4.5</p>
                     <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
                   </div>
                 </div>
@@ -58,23 +58,16 @@ class TripDetails extends Component {
               <div class="col-md-3">
                 <img src={require("../images/image1.jpg")} alt="hola" className="maxWidth" />
                 <div id="infoAboutEachHotel">
-                  <p className="hotelName">- Hotel Bubucela</p>
-                  <p>- $250 per night</p>
-                  <div className="flexCenteredStar">
-                    <p>- 4.5</p>
-                    <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
-                  </div>
+                  <p className="hotelName">- Takito Rico</p>
+                  <p className="hotelName">- Shushi Itto</p>
+                  <p className="hotelName">- Best Burger Co.</p>
                 </div>
               </div>
               <div class="col-md-3">
                 <img src={require("../images/image2.jpg")} alt="hola" className="maxWidth" />
                 <div id="infoAboutEachHotel">
-                  <p className="hotelName">- Hotel Bubucela</p>
-                  <p>- $250 per night</p>
-                  <div className="flexCenteredStar">
-                    <p>- 4.5</p>
-                    <img src={require('../images/star.png')} alt="logo" className="starIcon"/>
-                  </div>
+                <p className="hotelName">- Dancing with sirens</p>
+                  <p className="hotelName">- Swimming with tigers</p>
                 </div>
               </div>
             

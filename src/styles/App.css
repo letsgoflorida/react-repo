@@ -1000,6 +1000,7 @@ background: #707070;
   #infoAboutEachHotel {
       text-align: center;
       padding-top: 5px;
+      width: 250px;
   }
 
   #infoAboutEachHotel p {
@@ -1038,14 +1039,14 @@ background: #707070;
   }
 
   .detailsContent {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-      width: 90vw;
-      height: 90vh;
-      border: 5px black solid;
-      border-radius: 10px;
-      margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90vw;
+    height: 90vh;
+    border: 3px black solid;
+    border-radius: 10px;
+    margin-top: 60px;
   }
 
   .satan {
