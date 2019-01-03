@@ -37,11 +37,11 @@ class TripDetails extends Component {
 
   render(){
     return(
-      <div className="flexCenteredWH">
+      <div className="flexCenteredWH tripDetailsBackground">
         <div className="detailsContent">
           <div className="flexEvenly">
             <h1 id="detailsName">{this.state.trip.location}</h1>
-            <p id="finalBudgetText">Final Budget: ${this.showFinalBudget()}</p>
+            <p id="finalBudgetText"><img src={require("../images/money_icon_322468.png")} alt="money" className="" />${this.showFinalBudget()}</p>
           </div>
             <div className="satan">
               <div class="col-md-3">

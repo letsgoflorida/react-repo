@@ -1041,14 +1041,25 @@ background: #707070;
   }
 
   #finalBudgetText{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     border: 1px black solid;
     padding: 5px;
     border-radius: 5px;
     font-size: 30px;
   }
 
+  #finalBudgetText img {
+      width: 50px;
+  }
+
   .absolute{
     position: absolute;
-    left: 1250px;
+    left: 1225px;
     top: 100px;
+  }
+
+  .tripDetailsBackground{
+    background-image: url("../images/gradient.jpg"); 
   }
