@@ -10,7 +10,9 @@ class TripDetails extends Component {
   tripService = new TripService()
 
   componentDidMount() {
-    this.tripService.tripInfo(this.props.tripId)
+    let tripId = this.props.location.pathname.split("/")
+    console.log(tripId)
+    this.tripService.tripInfo(tripId[2])
     .then((trip2)=>{
       this.setState({
         trip: trip2
@@ -20,13 +22,26 @@ class TripDetails extends Component {
     })
   }
 
+  showFinalBudget = () => {
+    if(this.state.trip.details) {
+    let finalBudget = this.state.trip.details.reduce((x, y) => {
+      return x + Number(y.price)
+    }, 0)
+    return (
+      <span>
+        {finalBudget}
+      </span>
+    )
+    }
+  }
+
   render(){
     return(
       <div className="flexCenteredWH">
         <div className="detailsContent">
           <div className="flexEvenly">
-            <h1 id="detailsName">Miami</h1>
-            <p id="finalBudgetText">Final Budget: 145$</p>
+            <h1 id="detailsName">{this.state.trip.location}</h1>
+            <p id="finalBudgetText">Final Budget: ${this.showFinalBudget()}</p>
           </div>
             <div className="satan">
               <div class="col-md-3">
