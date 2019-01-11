@@ -1093,3 +1093,7 @@ background: #707070;
       font-family: Brux;
       font-size: 130px;
   }
+
+  #signedMessage {
+      padding-bottom: 10px;
+  }

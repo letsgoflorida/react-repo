@@ -47,6 +47,7 @@ class Home extends Component {
                   <form onSubmit={this.handleFormSubmit}>
                       <div className="form-group">
                         <span className="form-label">Your Destination</span>
+                        <p id="signedMessage">(You must be signed in to search for a city)</p>
                         <input className="form-control" type="text" name="destination" placeholder="Miami" value={this.state.destination} onChange={e => this.handleChange(e)}/>
                       </div>       
                       
