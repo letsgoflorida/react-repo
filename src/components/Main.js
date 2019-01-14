@@ -155,7 +155,7 @@ class Main extends Component {
 				</div>
 				
 					<div id="alternativeContent">
-    				<p>I'm sorry, but this app is not yet available to be used in a screen of this size. Please try re-opening it within a bigger screen. </p>
+    				<p>I'm sorry, but this app is not yet available to be used on a screen of this size. Please try re-opening it on a bigger screen. </p>
     				<img src={require('../images/brokenHeart.png')} alt="Sorry :("/>
 					</div>
 							
