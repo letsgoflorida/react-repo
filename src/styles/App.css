@@ -1097,3 +1097,43 @@ background: #707070;
   #signedMessage {
       padding-bottom: 10px;
   }
+
+  #alternativeContent {
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+#alternativeContent p {
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#alternativeContent img {
+    width: 80vw;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+  @media screen and (max-width: 1199px){
+      .height {
+        display: none;
+      }
+
+      #homeContent {
+          display: none;
+      }
+      
+      #navbarContent {
+          display: none;
+      }
+
+      #alternativeContent {
+          display: flex;
+      }
+
+
+    }

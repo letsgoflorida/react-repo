@@ -7,7 +7,7 @@ import {Route, Switch, Link} from "react-router-dom";
 class Navbar extends Component {
   render(){
     return(
-      <div>
+      <div id="navbarContent">
         <nav id="navClass" className="main-navigation">
            <Link to="/"><img src={require('../images/Jaime_logo-02.png')} alt="logo" className="logoImage animated1 fadeInUp"/></Link>
           <ul id="list" className="nav-list">

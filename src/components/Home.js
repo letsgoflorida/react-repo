@@ -38,7 +38,7 @@ class Home extends Component {
 
   render() {
       return(
-        <div>
+        <div id="homeContent">
           <h1 id="slogan">Let's Go Florida</h1>
             <div id="formContent" className="container fadeIn">
               <div className="row flexCenteredWH">

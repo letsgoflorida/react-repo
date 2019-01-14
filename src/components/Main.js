@@ -121,36 +121,45 @@ class Main extends Component {
 
   render() {
     return(
-      <div>
-				<Profile 
-					trip={this.tripId}
-					profile={this.state.modalProfile} 
-					user={this.state.loggedUser} 
-					hide={this.hideModal} 
-					logout={this.logout}
-				/>
-				<Navbar 
-					show={this.showModal}
-					user={this.state.loggedUser}
-					logout={this.logout}
-				/>  
-    	  <SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
-				<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
-    	  <Switch>
-					<Route path="/trip" 
-						render={(props)=> <TripDetails {...props} tripId={this.state.trip}/>}/>
-					<Route exact path="/" 
-						render={(props) => <Home {...props} 
-						submitForm={this.submitForm}  
+      
+		<div>
+		<div>
+					<Profile 
+						trip={this.tripId}
+						profile={this.state.modalProfile} 
+						user={this.state.loggedUser} 
+						hide={this.hideModal} 
+						logout={this.logout}
+					/>
+					<Navbar 
+						show={this.showModal}
 						user={this.state.loggedUser}
-						reset={this.deleteState}/>}/>
-					<Route exact path="/create" 
-						render={(props) => <Create {...props} 
-						destinationDetails={this.state.destinationInfo} 
-						destination={this.state.destination}
-						/>}/>
-    	  </Switch>
-      </div>
+						logout={this.logout}
+					/>  
+					<SignUp signUp={this.state.modalSignUp} hide={this.hideModal} log={this.logUser}/>
+					<LogIn logIn={this.state.modalLogIn} hide={this.hideModal} log={this.logUser}/>
+					<Switch>
+						<Route path="/trip" 
+							render={(props)=> <TripDetails {...props} tripId={this.state.trip}/>}/>
+						<Route exact path="/" 
+							render={(props) => <Home {...props} 
+							submitForm={this.submitForm}  
+							user={this.state.loggedUser}
+							reset={this.deleteState}/>}/>
+						<Route exact path="/create" 
+							render={(props) => <Create {...props} 
+							destinationDetails={this.state.destinationInfo} 
+							destination={this.state.destination}
+							/>}/>
+					</Switch>
+				</div>
+				
+					<div id="alternativeContent">
+    				<p>I'm sorry, but this app is not yet available to be used in a screen of this size. Please try re-opening it within a bigger screen. </p>
+    				<img src={require('../images/brokenHeart.png')} alt="Sorry :("/>
+					</div>
+							
+			</div>
   	)
   }
 }
